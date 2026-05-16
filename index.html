@@ -297,46 +297,8 @@
             style="display: none;">WhatsApp</span>
     </a>
 
-    <!-- ================= SCRIPT (Lingue e Cookie) ================= -->
-    <script>
-        // Logica per il Cookie Banner
-        document.addEventListener("DOMContentLoaded", function () {
-            if (!localStorage.getItem("cookieAccettati")) {
-                document.getElementById("cookieBanner").style.display = "block";
-            }
-        });
-
-        function accettaCookie() {
-            localStorage.setItem("cookieAccettati", "true");
-            document.getElementById("cookieBanner").style.display = "none";
-            // Qui potresti inizializzare Google Analytics se l'utente ha accettato
-        }
-
-        function rifiutaCookie() {
-            localStorage.setItem("cookieAccettati", "false");
-            document.getElementById("cookieBanner").style.display = "none";
-        }
-
-        // Sistema Bilingue Dinamico
-        function setLang(lang) {
-            document.getElementById('btn-it').classList.remove('active');
-            document.getElementById('btn-de').classList.remove('active');
-            document.getElementById('btn-' + lang).classList.add('active');
-
-            let elementsIT = document.querySelectorAll('.lang-it');
-            let elementsDE = document.querySelectorAll('.lang-de');
-
-            if (lang === 'it') {
-                elementsIT.forEach(el => el.style.display = '');
-                elementsDE.forEach(el => el.style.display = 'none');
-                document.documentElement.lang = 'it';
-            } else if (lang === 'de') {
-                elementsDE.forEach(el => el.style.display = '');
-                elementsIT.forEach(el => el.style.display = 'none');
-                document.documentElement.lang = 'de';
-            }
-        }
-    </script>
+    <!-- ================= SCRIPT ================= -->
+    <script src="script.js"></script>
 </body>
 
 </html>
