@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Nostri Lavori | Referenzen | IDAL BAU</title>
+    <meta name="description" content="Guarda i risultati delle nostre ristrutturazioni a Merano e Bolzano. Scorri le immagini Prima e Dopo dei nostri cantieri. Entdecken Sie unsere Referenzen.">
+    <meta name="keywords" content="portfolio ristrutturazioni Merano, lavori edili Alto Adige, prima e dopo bagno, Referenzen Bauunternehmen Südtirol, IDAL BAU">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TUO_CODICE_QUI"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TUO_CODICE_QUI');</script>
+
+    <style>
+        /* === VARIABILI E BASE === */
+        :root { --idal-red: #D32F2F; --idal-black: #111111; --idal-grey: #757575; --idal-light-grey: #F4F5F7; --idal-white: #FFFFFF; }
+        * { margin: 0; padding: 0; box-sizing: border-box; } html { scroll-behavior: smooth; }
+        body { font-family: 'Roboto', sans-serif; color: var(--idal-black); background: var(--idal-light-grey); line-height: 1.6; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; } a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* === TOP BAR & HEADER === */
+        .top-bar { background: var(--idal-black); color: var(--idal-white); font-size: 0.85rem; padding: 8px 0; }
+        .top-bar-flex { display: flex; justify-content: space-between; align-items: center; }
+        .top-bar a { margin-right: 20px; display: inline-flex; align-items: center; gap: 5px; } .top-bar a:hover { color: var(--idal-red); } .top-bar i { color: var(--idal-red); }
+        header { background: var(--idal-white); box-shadow: 0 4px 6px rgba(0,0,0,0.1); position: sticky; top: 0; width: 100%; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; max-width: 1200px; margin: 0 auto; }
+        .logo img { height: 60px; } .nav-links { display: flex; gap: 25px; align-items: center; } .nav-links a { font-weight: 700; font-family: 'Montserrat', sans-serif; cursor: pointer; } .nav-links a:hover { color: var(--idal-red); }
+        .dropdown { position: relative; display: inline-block; } .dropdown-content { display: none; position: absolute; background-color: var(--idal-white); min-width: 280px; box-shadow: 0px 8px 16px rgba(0,0,0,0.1); z-index: 1; border-top: 3px solid var(--idal-red); }
+        .dropdown-content a { color: var(--idal-black); padding: 12px 16px; display: block; font-weight: 400; border-bottom: 1px solid #eee; } .dropdown-content a:hover { background-color: #f1f1f1; color: var(--idal-red); padding-left: 20px; } .dropdown:hover .dropdown-content { display: block; }
+        .lang-toggle { display: flex; border: 2px solid var(--idal-grey); border-radius: 20px; overflow: hidden; } .lang-btn { background: transparent; border: none; padding: 5px 15px; cursor: pointer; font-weight: 700; font-family: 'Montserrat', sans-serif; } .lang-btn.active { background: var(--idal-red); color: var(--idal-white); }
+        
+        /* === PAGE HEADER === */
+        .page-header { background: linear-gradient(rgba(17,17,17,0.8), rgba(17,17,17,0.8)), url('images/hero-bg.jpg') center/cover; padding: 80px 20px; text-align: center; color: white; }
+        .page-header h1 { font-size: 3rem; text-transform: uppercase; }
+
+        /* === SLIDER PRIMA E DOPO (MAGIA CSS) === */
+        .portfolio-section { padding: 80px 0; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; text-transform: uppercase; }
+        .section-title span { color: var(--idal-red); }
+
+        .slider-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+        .slider-card { background: var(--idal-white); padding: 20px; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .slider-card h3 { margin-bottom: 15px; font-size: 1.3rem; text-align: center; }
+
+        /* Contenitore Slider */
+        .ba-slider { position: relative; width: 100%; overflow: hidden; border-radius: 4px; aspect-ratio: 4/3; }
+        .ba-slider img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+        
+        /* Immagine 'Prima' tagliata */
+        .ba-before { clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%); z-index: 2; }
+        
+        /* Input Range Trasparente (Cattura il tocco/mouse) */
+        .ba-range { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 5; opacity: 0; cursor: ew-resize; margin: 0; }
+        
+        /* Linea centrale e Pulsante */
+        .ba-line { position: absolute; top: 0; left: 50%; width: 4px; height: 100%; background: var(--idal-white); z-index: 3; pointer-events: none; transform: translateX(-50%); box-shadow: 0 0 10px rgba(0,0,0,0.5); }
+        .ba-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; background: var(--idal-red); border: 3px solid var(--idal-white); border-radius: 50%; z-index: 4; pointer-events: none; display: flex; justify-content: center; align-items: center; color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        
+        /* Etichette Prima/Dopo */
+        .ba-label { position: absolute; top: 15px; padding: 5px 15px; color: var(--idal-white); background: rgba(17,17,17,0.7); font-family: 'Montserrat', sans-serif; font-weight: 700; border-radius: 20px; font-size: 0.85rem; z-index: 3; pointer-events: none; }
+        .ba-label-before { left: 15px; }
+        .ba-label-after { right: 15px; }
+
+        /* Galleria Classica */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 60px; }
+        .gallery-item { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.3s; cursor: pointer; }
+        .gallery-item:hover { transform: scale(1.03); }
+
+        /* Footer */
+        footer { background: var(--idal-black); color: var(--idal-white); text-align: center; padding: 40px 20px; margin-top: 50px; }
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: #FFF; border-radius: 50px; padding: 15px 25px; font-weight: 700; display: flex; align-items: center; gap: 10px; z-index: 1000; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .top-bar-flex { flex-direction: column; }
+            .ba-slider { aspect-ratio: 1/1; } /* Più quadrato su mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-flex">
+            <div class="top-bar-left">
+                <a href="tel:+393355652179"><i class="fas fa-phone-alt"></i> +39 335 565 2179</a>
+                <a href="mailto:info@idalbau.it"><i class="fas fa-envelope"></i> info@idalbau.it</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="nav-container">
+            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="IDAL BAU"></a></div>
+            <nav class="nav-links">
+                <a href="index.html" class="lang-it">Home</a>
+                <a href="index.html" class="lang-de" style="display: none;">Startseite</a>
+                <div class="dropdown">
+                    <a class="lang-it">Servizi <i class="fas fa-chevron-down"></i></a>
+                    <a class="lang-de" style="display: none;">Dienstleistungen <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="ristrutturazione-bagno-merano.html" class="lang-it">Ristrutturazioni Bagni Merano</a>
+                        <a href="ristrutturazione-bagno-merano.html" class="lang-de" style="display: none;">Badsanierung Meran</a>
+                    </div>
+                </div>
+                <a href="chi-siamo.html" class="lang-it">Chi Siamo</a>
+                <a href="chi-siamo.html" class="lang-de" style="display: none;">Über uns</a>
+                <a href="portfolio.html" class="lang-it" style="color:var(--idal-red);">I Nostri Lavori</a>
+                <a href="portfolio.html" class="lang-de" style="color:var(--idal-red); display:none;">Referenzen</a>
+                <div class="lang-toggle">
+                    <button id="btn-it" class="lang-btn active" onclick="setLang('it')">IT</button>
+                    <button id="btn-de" class="lang-btn" onclick="setLang('de')">DE</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 class="lang-it">I Nostri Lavori</h1>
+            <h1 class="lang-de" style="display:none;">Unsere Referenzen</h1>
+            <p class="lang-it">Scorri per vedere la trasformazione dei nostri cantieri.</p>
+            <p class="lang-de" style="display:none;">Schieben Sie den Regler, um die Vorher/Nachher-Vergleiche zu sehen.</p>
+        </div>
+    </div>
+
+    <section class="portfolio-section container">
+        <h2 class="section-title lang-it">Ristrutturazioni <span>In Evidenza</span></h2>
+        <h2 class="section-title lang-de" style="display:none;">Aktuelle <span>Projekte</span></h2>
+
+        <div class="slider-grid">
+            
+            <!-- SLIDER 1: Ristrutturazione Bagno -->
+            <div class="slider-card">
+                <h3 class="lang-it">Rifacimento Completo Bagno</h3>
+                <h3 class="lang-de" style="display:none;">Komplette Badsanierung</h3>
+                <div class="ba-slider">
+                    <!-- Immagine DOPO (Sotto) -->
+                    <img src="images/bagno-dopo.jpg" alt="Bagno Nuovo" class="ba-after">
+                    <!-- Immagine PRIMA (Sopra, tagliata dal CSS) -->
+                    <img src="images/bagno-prima.jpg" alt="Bagno Vecchio" class="ba-before">
+                    
+                    <input type="range" min="0" max="100" value="50" class="ba-range" oninput="moveSlider(this)">
+                    <div class="ba-line"></div>
+                    <div class="ba-button"><i class="fas fa-arrows-alt-h"></i></div>
+                    
+                    <div class="ba-label ba-label-before lang-it">Prima</div>
+                    <div class="ba-label ba-label-before lang-de" style="display:none;">Vorher</div>
+                    <div class="ba-label ba-label-after lang-it">Dopo</div>
+                    <div class="ba-label ba-label-after lang-de" style="display:none;">Nachher</div>
+                </div>
+            </div>
+
+            <!-- SLIDER 2: Impermeabilizzazione Terrazza -->
+            <div class="slider-card">
+                <h3 class="lang-it">Impermeabilizzazione Terrazza</h3>
+                <h3 class="lang-de" style="display:none;">Terrassenabdichtung</h3>
+                <div class="ba-slider">
+                    <!-- Immagine DOPO -->
+                    <img src="images/terrazza-dopo.jpg" alt="Terrazza Nuova" class="ba-after">
+                    <!-- Immagine PRIMA -->
+                    <img src="images/terrazza-prima.jpg" alt="Terrazza Vecchia" class="ba-before">
+                    
+                    <input type="range" min="0" max="100" value="50" class="ba-range" oninput="moveSlider(this)">
+                    <div class="ba-line"></div>
+                    <div class="ba-button"><i class="fas fa-arrows-alt-h"></i></div>
+                    
+                    <div class="ba-label ba-label-before lang-it">Prima</div>
+                    <div class="ba-label ba-label-before lang-de" style="display:none;">Vorher</div>
+                    <div class="ba-label ba-label-after lang-it">Dopo</div>
+                    <div class="ba-label ba-label-after lang-de" style="display:none;">Nachher</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- GALLERIA CLASSICA (Sotto gli slider) -->
+        <h2 class="section-title lang-it" style="margin-top: 100px;">Altre <span>Realizzazioni</span></h2>
+        <h2 class="section-title lang-de" style="display:none; margin-top: 100px;">Weitere <span>Arbeiten</span></h2>
+        
+        <div class="gallery-grid">
+            <!-- Sostituisci questi src con i veri nomi delle tue foto (01.jpg, 02.jpg, ecc.) -->
+            <img src="images/01.jpg" class="gallery-item" alt="Lavoro edile IDAL BAU">
+            <img src="images/02.jpg" class="gallery-item" alt="Lavoro edile IDAL BAU">
+            <img src="images/03.jpg" class="gallery-item" alt="Lavoro edile IDAL BAU">
+            <img src="images/04.jpg" class="gallery-item" alt="Lavoro edile IDAL BAU">
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 IDAL BAU. <a href="impressum.html" style="color:#aaa; text-decoration:underline;">Impressum</a></p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/393355652179" class="whatsapp-float"><i class="fab fa-whatsapp"></i> <span class="lang-it">WhatsApp</span><span class="lang-de" style="display:none;">WhatsApp</span></a>
+
+    <script>
+        // FUNZIONE MAGICA PER LO SLIDER PRIMA/DOPO
+        function moveSlider(element) {
+            // Trova il contenitore genitore di questo slider specifico
+            const container = element.parentElement;
+            
+            // Trova gli elementi da muovere all'interno di questo contenitore
+            const beforeImage = container.querySelector('.ba-before');
+            const sliderLine = container.querySelector('.ba-line');
+            const sliderBtn = container.querySelector('.ba-button');
+            
+            // Prendi il valore (da 0 a 100)
+            const sliderValue = element.value;
+            
+            // Taglia l'immagine "Prima" in base alla percentuale
+            beforeImage.style.clipPath = `polygon(0 0, ${sliderValue}% 0, ${sliderValue}% 100%, 0 100%)`;
+            
+            // Sposta la linea bianca e il bottone
+            sliderLine.style.left = `${sliderValue}%`;
+            sliderBtn.style.left = `${sliderValue}%`;
+        }
+
+        // SISTEMA BILINGUE
+        function setLang(lang) {
+            document.getElementById('btn-it').classList.remove('active'); document.getElementById('btn-de').classList.remove('active'); document.getElementById('btn-' + lang).classList.add('active');
+            let it = document.querySelectorAll('.lang-it'); let de = document.querySelectorAll('.lang-de');
+            if(lang === 'it') { it.forEach(el => el.style.display = ''); de.forEach(el => el.style.display = 'none'); document.documentElement.lang = 'it'; }
+            else { de.forEach(el => el.style.display = ''); it.forEach(el => el.style.display = 'none'); document.documentElement.lang = 'de'; }
+        }
+    </script>
+</body>
+</html>
