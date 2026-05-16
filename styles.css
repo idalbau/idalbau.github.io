@@ -407,7 +407,55 @@ header {
     transform: translateY(0);
 }
 
-/* ================= CONTACT FORM ================= */
+/* ================= ABOUT / CHI SIAMO SECTION ================= */
+.about-section {
+    padding: 90px 0;
+    background: var(--idal-white);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 16px;
+}
+
+.about-content strong {
+    color: var(--idal-black);
+}
+
+.about-checklist {
+    list-style: none;
+    margin-top: 28px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 40px;
+}
+
+.about-checklist li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--idal-black);
+}
+
+.about-checklist li i {
+    color: var(--idal-red);
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+/* ================= CONTACT SECTION ================= */
 .contact {
     padding: 100px 0;
     background: var(--idal-light-grey);
@@ -422,6 +470,37 @@ header {
 .contact-info, .contact-form {
     flex: 1;
     min-width: 300px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.contact-info p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--idal-black);
+}
+
+.contact-info i {
+    color: var(--idal-red);
+    margin-right: 10px;
+    font-size: 1.15rem;
+    width: 20px;
+    text-align: center;
+}
+
+.contact-info a {
+    color: var(--idal-black);
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    color: var(--idal-red);
 }
 
 .contact-form {
