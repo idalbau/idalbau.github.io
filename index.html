@@ -15,6 +15,20 @@
     <meta name="google-site-verification" content="HLD8cy2vvzONBcl6k59KqzrnBDxmYVXYlsPNJVeZzLU" />
     <link rel="canonical" href="https://idalbau.github.io/" />
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://idalbau.github.io/">
+    <meta property="og:title" content="IDAL BAU | Impresa Edile Merano & Bolzano">
+    <meta property="og:description" content="Ristrutturazioni chiavi in mano, impermeabilizzazioni e opere murarie in Alto Adige. Qualità e professionalità al tuo servizio.">
+    <meta property="og:image" content="https://idalbau.github.io/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://idalbau.github.io/">
+    <meta property="twitter:title" content="IDAL BAU | Impresa Edile Merano & Bolzano">
+    <meta property="twitter:description" content="Ristrutturazioni chiavi in mano, impermeabilizzazioni e opere murarie in Alto Adige.">
+    <meta property="twitter:image" content="https://idalbau.github.io/images/og-image.jpg">
+
     <!-- Google Fonts & FontAwesome -->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap"
@@ -31,471 +45,7 @@
     </script>
 
     <!-- ================= DESIGN E STILI (CSS) ================= -->
-    <style>
-        :root {
-            --idal-red: #D32F2F;
-            --idal-black: #111111;
-            --idal-grey: #757575;
-            --idal-light-grey: #F4F5F7;
-            --idal-white: #FFFFFF;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            color: var(--idal-black);
-            background: var(--idal-white);
-            line-height: 1.6;
-            padding-top: 0;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* ================= 1. TOP BAR ================= */
-        .top-bar {
-            background: var(--idal-black);
-            color: var(--idal-white);
-            font-size: 0.85rem;
-            padding: 8px 0;
-        }
-
-        .top-bar-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .top-bar a {
-            margin-right: 20px;
-            transition: color 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .top-bar a:hover {
-            color: var(--idal-red);
-        }
-
-        .top-bar i {
-            color: var(--idal-red);
-        }
-
-        /* ================= HEADER & MENU MULTI-PAGINA ================= */
-        header {
-            background: var(--idal-white);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo img {
-            height: 100px;
-            transition: height 0.3s;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-            align-items: center;
-        }
-
-        .nav-links>a,
-        .dropdown>a {
-            font-weight: 700;
-            font-family: 'Montserrat', sans-serif;
-            transition: color 0.3s;
-            cursor: pointer;
-        }
-
-        .nav-links a:hover {
-            color: var(--idal-red);
-        }
-
-        /* Dropdown SEO Pagine Servizio */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: var(--idal-white);
-            min-width: 280px;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-            z-index: 1;
-            border-top: 3px solid var(--idal-red);
-        }
-
-        .dropdown-content a {
-            color: var(--idal-black);
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            font-weight: 400;
-            border-bottom: 1px solid #eee;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-            color: var(--idal-red);
-            padding-left: 20px;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Pulsanti */
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background: var(--idal-red);
-            color: var(--idal-white);
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            text-transform: uppercase;
-            border-radius: 4px;
-            transition: 0.3s;
-            border: 2px solid var(--idal-red);
-            cursor: pointer;
-            text-align: center;
-        }
-
-        .btn:hover {
-            background: var(--idal-white);
-            color: var(--idal-red);
-        }
-
-        /* Toggle Bilingue */
-        .lang-toggle {
-            display: flex;
-            border: 2px solid var(--idal-grey);
-            border-radius: 20px;
-            overflow: hidden;
-        }
-
-        .lang-btn {
-            background: transparent;
-            border: none;
-            padding: 5px 15px;
-            cursor: pointer;
-            font-weight: 700;
-            font-family: 'Montserrat', sans-serif;
-            transition: 0.3s;
-        }
-
-        .lang-btn.active {
-            background: var(--idal-red);
-            color: var(--idal-white);
-        }
-
-        /* ================= SERVIZI ================= */
-        .services {
-            padding: 80px 0;
-            background: var(--idal-white);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            color: var(--idal-black);
-        }
-
-        .section-title span {
-            color: var(--idal-red);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-card {
-            background: var(--idal-light-grey);
-            padding: 40px 30px;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-card i {
-            font-size: 3rem;
-            color: var(--idal-red);
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-
-        .service-card p {
-            font-size: 1rem;
-            color: var(--idal-grey);
-        }
-
-        /* ================= HERO SECTION ================= */
-        .hero {
-            height: calc(100vh - 100px);
-            background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url('images/hero-bg.jpg') center/cover;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: var(--idal-white);
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-            font-weight: 300;
-        }
-
-        /* ================= FORM & GDPR ================= */
-        .contact {
-            padding: 100px 0;
-            background: var(--idal-light-grey);
-        }
-
-        .contact-flex {
-            display: flex;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-
-        .contact-info,
-        .contact-form {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .contact-form {
-            background: var(--idal-white);
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            border-color: var(--idal-red);
-            outline: none;
-        }
-
-        /* Checkbox Privacy */
-        .gdpr-checkbox {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin-bottom: 20px;
-            font-size: 0.85rem;
-            color: var(--idal-grey);
-        }
-
-        .gdpr-checkbox input {
-            width: auto;
-            margin: 5px 0 0 0;
-        }
-
-        /* ================= COOKIE BANNER ================= */
-        .cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(17, 17, 17, 0.95);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            z-index: 9999;
-            display: none;
-            box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .cookie-banner p {
-            margin-bottom: 15px;
-            font-size: 0.9rem;
-        }
-
-        .cookie-banner a {
-            color: var(--idal-red);
-            text-decoration: underline;
-        }
-
-        .cookie-buttons button {
-            padding: 10px 20px;
-            margin: 0 10px;
-            font-size: 0.9rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-            border: none;
-        }
-
-        .btn-accept {
-            background: var(--idal-red);
-            color: white;
-        }
-
-        .btn-reject {
-            background: transparent;
-            border: 1px solid white;
-            color: white;
-        }
-
-        /* Footer & Link Legali */
-        footer {
-            background: var(--idal-black);
-            color: var(--idal-white);
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .legal-links {
-            margin-top: 20px;
-            font-size: 0.85rem;
-            color: #aaa;
-        }
-
-        .legal-links a {
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-
-        .legal-links a:hover {
-            color: var(--idal-red);
-            text-decoration: underline;
-        }
-
-        /* ================= WHATSAPP ================= */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            padding: 15px 25px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            transition: 0.3s;
-        }
-
-        .whatsapp-float:hover {
-            background-color: #128C7E;
-            transform: scale(1.05);
-        }
-
-        @media (max-width: 768px) {
-            .top-bar-flex {
-                flex-direction: column;
-                gap: 5px;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: var(--idal-white);
-                padding: 20px 0;
-            }
-
-            .dropdown-content {
-                position: static;
-                box-shadow: none;
-                border-top: none;
-                padding-left: 20px;
-            }
-
-            .logo img {
-                height: 70px;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .whatsapp-float {
-                padding: 12px;
-                font-size: 0;
-            }
-
-            .whatsapp-float i {
-                font-size: 2rem;
-                margin: 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -523,7 +73,9 @@
     <header>
         <div class="nav-container">
             <div class="logo">
-                <a href="index.html"><img src="images/logo.png" alt="IDAL BAU Logo"></a>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="IDAL BAU Logo">
+                </a>
             </div>
 
             <nav class="nav-links" id="navLinks">
@@ -532,37 +84,37 @@
 
                 <!-- Struttura Multi-Pagina (Dropdown per SEO) -->
                 <div class="dropdown">
-                    <a class="lang-it">Servizi <i class="fas fa-chevron-down" style="font-size:1.2em;"></i></a>
-                    <a class="lang-de" style="display: none;">Dienstleistungen <i class="fas fa-chevron-down"
-                            style="font-size:1.2em;"></i></a>
+                    <a class="lang-it">Servizi <i class="fas fa-chevron-down"></i></a>
+                    <a class="lang-de" style="display: none;">Dienstleistungen <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <!-- Esempio di Pagine di Atterraggio SEO -->
-                        <a href="#servizi" class="lang-it" style="font-weight: 700; color: var(--idal-red);">Tutti i Servizi</a>
-                        <a href="#servizi" class="lang-de" style="display: none; font-weight: 700; color: var(--idal-red);">Alle Dienstleistungen</a>
+                        <a href="#servizi" class="lang-it dropdown-item primary">Tutti i Servizi</a>
+                        <a href="#servizi" class="lang-de dropdown-item primary" style="display: none;">Alle Dienstleistungen</a>
 
-                        <a href="ristrutturazione-bagno-merano.html" class="lang-it" style="color: #999;">Ristrutturazioni Bagni Merano</a>
-                        <a href="ristrutturazione-bagno-merano.html" class="lang-de" style="display: none; color: #999;">Badsanierung
-                            Meran</a>
+                        <a href="ristrutturazione-bagno-merano.html" class="lang-it dropdown-item secondary">Ristrutturazioni Bagni Merano</a>
+                        <a href="ristrutturazione-bagno-merano.html" class="lang-de dropdown-item secondary" style="display: none;">Badsanierung Meran</a>
 
-                        <a href="impermeabilizzazioni-bolzano.html" class="lang-it" style="color: #999;">Impermeabilizzazioni Bolzano</a>
-                        <a href="impermeabilizzazioni-bolzano.html" class="lang-de" style="display: none; color: #999;">Abdichtungen
-                            Bozen</a>
+                        <a href="impermeabilizzazioni-bolzano.html" class="lang-it dropdown-item secondary">Impermeabilizzazioni Bolzano</a>
+                        <a href="impermeabilizzazioni-bolzano.html" class="lang-de dropdown-item secondary" style="display: none;">Abdichtungen Bozen</a>
                     </div>
                 </div>
 
                 <a href="chi-siamo.html" class="lang-it">Chi Siamo</a>
                 <a href="chi-siamo.html" class="lang-de" style="display: none;">Über uns</a>
 
-                <a href="#contatti" class="btn lang-it" style="padding: 10px 20px;">Preventivo Gratuito</a>
-                <a href="#contatti" class="btn lang-de" style="display: none; padding: 10px 20px;">Kostenloses
-                    Angebot</a>
+                <a href="#contatti" class="btn lang-it">Preventivo Gratuito</a>
+                <a href="#contatti" class="btn lang-de" style="display: none;">Kostenloses Angebot</a>
 
                 <!-- Toggle Bilingue -->
-                <div class="lang-toggle">
-                    <button id="btn-it" class="lang-btn active" onclick="setLang('it')">IT</button>
-                    <button id="btn-de" class="lang-btn" onclick="setLang('de')">DE</button>
+                <div class="lang-switcher">
+                    <button id="btn-it" onclick="setLang('it')" class="active">IT</button>
+                    <button id="btn-de" onclick="setLang('de')">DE</button>
                 </div>
             </nav>
+
+            <!-- Mobile Toggle -->
+            <div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </header>
 
@@ -583,7 +135,7 @@
     </section>
 
     <!-- ================= SERVIZI ================= -->
-    <section id="servizi" class="services">
+    <section id="servizi" class="services reveal">
         <div class="container">
             <h2 class="section-title lang-it">I Nostri <span>Servizi</span></h2>
             <h2 class="section-title lang-de" style="display: none;">Unsere <span>Dienstleistungen</span></h2>
@@ -665,7 +217,7 @@
     </section>
 
     <!-- ================= 3. CONTATTI & MODULO CON GDPR ================= -->
-    <section id="contatti" class="contact">
+    <section id="contatti" class="contact reveal">
         <div class="container">
             <h2 class="section-title lang-it">Richiedi un <span>Preventivo</span></h2>
             <h2 class="section-title lang-de" style="display: none;">Fordern Sie ein <span>Angebot an</span></h2>
@@ -706,6 +258,11 @@
                 </div>
             </div>
         </div>
+    </section>
+    <!-- ================= MAPPA ================= -->
+    <section class="map reveal">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2757.557432328148!2d11.1481546!3d46.6713837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4782979201a4e15b%3A0xc47e3371f76d912b!2sVia%20Monte%20Ganda%2C%2018%2C%2039012%20Merano%20BZ!5e0!3m2!1sit!2sit!4v1690000000000!5m2!1sit!2sit" 
+                width="100%" height="450" style="border:0; filter: grayscale(100%) invert(90%);" allowfullscreen="" loading="lazy"></iframe>
     </section>
 
     <!-- ================= FOOTER & LINK LEGALI ================= -->
