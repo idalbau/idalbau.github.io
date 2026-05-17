@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="HLD8cy2vvzONBcl6k59KqzrnBDxmYVXYlsPNJVeZzLU" />
+    <title>Chi Siamo | Über uns | IDAL BAU Merano</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://idalbau.github.io/">
+    <meta property="og:title" content="IDAL BAU | Impresa Edile Merano & Bolzano">
+    <meta property="og:description" content="Ristrutturazioni chiavi in mano, impermeabilizzazioni e opere murarie in Alto Adige. Qualità e professionalità al tuo servizio.">
+    <meta property="og:image" content="https://idalbau.github.io/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://idalbau.github.io/">
+    <meta property="twitter:title" content="IDAL BAU | Impresa Edile Merano & Bolzano">
+    <meta property="twitter:description" content="Ristrutturazioni chiavi in mano, impermeabilizzazioni e opere murarie in Alto Adige.">
+    <meta property="twitter:image" content="https://idalbau.github.io/images/og-image.jpg">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="IDAL BAU Logo"></a>
+            </div>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="lang-it">Home</a>
+                <a href="index.html" class="lang-de" style="display: none;">Startseite</a>
+
+                <!-- Struttura Multi-Pagina (Dropdown per SEO) -->
+                <div class="dropdown">
+                    <a class="lang-it">Servizi <i class="fas fa-chevron-down" style="font-size:1.2em;"></i></a>
+                    <a class="lang-de" style="display: none;">Dienstleistungen <i class="fas fa-chevron-down"
+                            style="font-size:1.2em;"></i></a>
+                    <div class="dropdown-content">
+                        <!-- Esempio di Pagine di Atterraggio SEO -->
+                        <a href="index.html#servizi" class="lang-it" style="font-weight: 700; color: var(--idal-red);">Tutti i Servizi</a>
+                        <a href="index.html#servizi" class="lang-de" style="display: none; font-weight: 700; color: var(--idal-red);">Alle Dienstleistungen</a>
+
+                        <a href="ristrutturazione-bagno-merano.html" class="lang-it" style="color: #999;">Ristrutturazioni Bagni Merano</a>
+                        <a href="ristrutturazione-bagno-merano.html" class="lang-de" style="display: none; color: #999;">Badsanierung
+                            Meran</a>
+
+                        <a href="impermeabilizzazioni-bolzano.html" class="lang-it" style="color: #999;">Impermeabilizzazioni Bolzano</a>
+                        <a href="impermeabilizzazioni-bolzano.html" class="lang-de" style="display: none; color: #999;">Abdichtungen
+                            Bozen</a>
+                    </div>
+                </div>
+
+                <a href="chi-siamo.html" class="lang-it">Chi Siamo</a>
+                <a href="chi-siamo.html" class="lang-de" style="display: none;">Über uns</a>
+
+                <a href="#contatti" class="btn lang-it" style="padding: 10px 20px;">Preventivo Gratuito</a>
+                <a href="#contatti" class="btn lang-de" style="display: none; padding: 10px 20px;">Kostenloses
+                    Angebot</a>
+
+                <!-- Toggle Bilingue -->
+                <div class="lang-toggle">
+                    <button id="btn-it" class="lang-btn active" onclick="setLang('it')">IT</button>
+                    <button id="btn-de" class="lang-btn" onclick="setLang('de')">DE</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1 class="lang-it">La Nostra Azienda</h1>
+        <h1 class="lang-de" style="display:none;">Unser Unternehmen</h1>
+    </div>
+
+    <div class="container content">
+        <h2 class="lang-it" style="margin-bottom: 20px; color: var(--idal-red);">Fatos Karasani & IDAL BAU</h2>
+        <h2 class="lang-de" style="display:none; margin-bottom: 20px; color: var(--idal-red);">Fatos Karasani & IDAL BAU</h2>
+        
+        <p class="lang-it">IDAL BAU è nata con un obiettivo chiaro: offrire servizi edili di alta qualità a Merano e in tutto il territorio altoatesino. Sotto la guida esperta di Fatos Karasani, l'azienda si è specializzata in ristrutturazioni chiavi in mano, opere murarie complesse e risanamento di balconi e terrazze.</p>
+        <p class="lang-de" style="display:none;">IDAL BAU wurde mit einem klaren Ziel gegründet: hochwertige Baudienstleistungen in Meran und ganz Südtirol anzubieten. Unter der fachkundigen Leitung von Fatos Karasani hat sich das Unternehmen auf schlüsselfertige Sanierungen, komplexe Maurerarbeiten und die Sanierung von Balkonen spezialisiert.</p>
+
+        <br>
+        <h3 class="lang-it">I nostri valori fondamentali:</h3>
+        <h3 class="lang-de" style="display:none;">Unsere Grundwerte:</h3>
+        <ul style="list-style-type: none; margin-top: 15px;">
+            <li class="lang-it">✅ <strong>Precisione e Pulizia:</strong> Un cantiere ordinato è sinonimo di un lavoro ben fatto.</li>
+            <li class="lang-de" style="display:none;">✅ <strong>Präzision und Sauberkeit:</strong> Eine ordentliche Baustelle ist gleichbedeutend mit guter Arbeit.</li>
+            
+            <li class="lang-it" style="margin-top: 10px;">✅ <strong>Materiali di Prima Scelta:</strong> Non scendiamo a compromessi sulla qualità. Utilizziamo esclusivamente prodotti certificati e materiali di altissima qualità per garantire risultati eccellenti e duraturi.</li>
+            <li class="lang-de" style="display:none; margin-top: 10px;">✅ <strong>Erstklassige Materialien:</strong> Wir gehen keine Kompromisse bei der Qualität ein. Wir verwenden ausschließlich zertifizierte Produkte und hochwertigste Materialien, um exzellente und langlebige Ergebnisse zu garantieren.</li>
+            
+            <li class="lang-it" style="margin-top: 10px;">✅ <strong>Rispetto delle Tempistiche:</strong> Il tempo del cliente è prezioso. Rispettiamo le date di consegna pattuite.</li>
+            <li class="lang-de" style="display:none;" style="margin-top: 10px;">✅ <strong>Einhaltung von Fristen:</strong> Die Zeit unserer Kunden ist wertvoll. Wir halten vereinbarte Termine ein.</li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 IDAL BAU di Karasani Fatos. P.IVA: 03151460213.</p>
+            <div class="legal-links">
+                <a href="privacy-policy.html">Privacy Policy</a> |
+                <a href="cookie-policy.html">Cookie Policy</a> |
+                <a href="impressum.html">Impressum</a>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina non trovata | Seite nicht gefunden | IDAL BAU</title>
+    <meta name="google-site-verification" content="HLD8cy2vvzONBcl6k59KqzrnBDxmYVXYlsPNJVeZzLU" />
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ================= TOP BAR ================= -->
+    <div class="top-bar">
+        <div class="container top-bar-flex">
+            <div class="top-bar-left">
+                <a href="tel:+393355652179">
+                    <i class="fas fa-phone-alt"></i> +39 335 565 2179
+                </a>
+                <a href="mailto:info@idalbau.it"><i class="fas fa-envelope"></i> info@idalbau.it</a>
+            </div>
+            <div class="top-bar-right">
+                <span class="lang-it"><i class="far fa-clock"></i> Orario: Lun-Ven 07:30 - 18:00</span>
+                <span class="lang-de" style="display:none;"><i class="far fa-clock"></i> Zeiten: Mo-Fr 07:30 - 18:00</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="IDAL BAU Logo"></a>
+            </div>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="lang-it">Home</a>
+                <a href="index.html" class="lang-de" style="display: none;">Startseite</a>
+
+                <div class="dropdown">
+                    <a class="lang-it">Servizi <i class="fas fa-chevron-down"></i></a>
+                    <a class="lang-de" style="display: none;">Dienstleistungen <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="index.html#servizi" class="lang-it dropdown-item primary">Tutti i Servizi</a>
+                        <a href="index.html#servizi" class="lang-de dropdown-item primary" style="display: none;">Alle Dienstleistungen</a>
+                        <a href="ristrutturazione-bagno-merano.html" class="lang-it dropdown-item secondary">Ristrutturazioni Bagni Merano</a>
+                        <a href="ristrutturazione-bagno-merano.html" class="lang-de dropdown-item secondary" style="display: none;">Badsanierung Meran</a>
+                        <a href="impermeabilizzazioni-bolzano.html" class="lang-it dropdown-item secondary">Impermeabilizzazioni Bolzano</a>
+                        <a href="impermeabilizzazioni-bolzano.html" class="lang-de dropdown-item secondary" style="display: none;">Abdichtungen Bozen</a>
+                    </div>
+                </div>
+
+                <a href="chi-siamo.html" class="lang-it">Chi Siamo</a>
+                <a href="chi-siamo.html" class="lang-de" style="display: none;">Über uns</a>
+
+                <a href="portfolio.html" class="lang-it">Esempi</a>
+                <a href="portfolio.html" class="lang-de" style="display: none;">Beispiele</a>
+
+                <a href="index.html#contatti" class="btn lang-it">Preventivo Gratuito</a>
+                <a href="index.html#contatti" class="btn lang-de" style="display: none;">Kostenloses Angebot</a>
+
+                <div class="lang-switcher">
+                    <button id="btn-it" onclick="setLang('it')" class="active" aria-label="Italiano">IT</button>
+                    <button id="btn-de" onclick="setLang('de')" aria-label="Deutsch">DE</button>
+                </div>
+            </nav>
+            <div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= 404 CONTENT ================= -->
+    <section class="error-section">
+        <div class="error-code">404</div>
+
+        <div class="lang-it">
+            <h1 class="error-title">Ops! Pagina non trovata.</h1>
+            <p class="error-desc">La pagina che stai cercando potrebbe essere stata rimossa, aver cambiato nome, oppure il link che hai digitato è errato. Niente paura, le fondamenta del sito sono solide!</p>
+            <a href="index.html" class="btn"><i class="fas fa-home"></i> Torna alla Home</a>
+        </div>
+
+        <div class="lang-de" style="display: none;">
+            <h1 class="error-title">Hoppla! Seite nicht gefunden.</h1>
+            <p class="error-desc">Die von Ihnen gesuchte Seite wurde möglicherweise entfernt, umbenannt oder der eingegebene Link ist falsch. Keine Sorge, das Fundament der Website ist stabil!</p>
+            <a href="index.html" class="btn"><i class="fas fa-home"></i> Zurück zur Startseite</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 IDAL BAU di Karasani Fatos. P.IVA: 03151460213.</p>
+            <div class="legal-links">
+                <a href="privacy-policy.html">Privacy Policy</a> |
+                <a href="cookie-policy.html">Cookie Policy</a> |
+                <a href="impressum.html">Impressum</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

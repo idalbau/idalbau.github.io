@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ================= SEO OTTIMIZZATA PER GOOGLE ================= -->
+    <title>IDAL BAU di Karasani Fatos | Impresa Edile Merano | Bauunternehmen Meran</title>
+    <meta name="description" content="IDAL BAU: Impresa edile a Merano e Bolzano. Ristrutturazioni chiavi in mano, opere murarie, impermeabilizzazioni. Bauunternehmen in Meran für schlüsselfertige Sanierungen.">
+    <meta name="keywords" content="impresa edile Merano, muratore Merano, ristrutturazioni chiavi in mano Alto Adige, Bauunternehmen Meran, Maurer Meran, schlüsselfertige Sanierungen Südtirol, IDAL BAU, Karasani Fatos, impermeabilizzazioni, cartongesso, cappotto termico">
+    <meta name="author" content="IDAL BAU di Karasani Fatos">
+    <link rel="canonical" href="https://idalbau.github.io/" />
+
+    <!-- Google Fonts & FontAwesome (per le icone) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ================= DESIGN E STILI (CSS) ================= -->
+    <style>
+        /* Variabili Colori IDAL BAU */
+        :root {
+            --idal-red: #D32F2F; /* Rosso del tetto del logo */
+            --idal-black: #111111; /* Nero del testo */
+            --idal-grey: #757575; /* Grigio di accento */
+            --idal-light-grey: #F4F5F7; /* Sfondo sezioni alternate */
+            --idal-white: #FFFFFF;
+        }
+
+        /* Reset e Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Roboto', sans-serif; color: var(--idal-black); background: var(--idal-white); line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; }
+        a { text-decoration: none; color: inherit; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section-title { text-align: center; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 50px; color: var(--idal-black); }
+        .section-title span { color: var(--idal-red); }
+
+        /* Pulsanti */
+        .btn { display: inline-block; padding: 15px 30px; background: var(--idal-red); color: var(--idal-white); font-family: 'Montserrat', sans-serif; font-weight: 700; text-transform: uppercase; border-radius: 4px; transition: 0.3s; border: 2px solid var(--idal-red); cursor: pointer; }
+        .btn:hover { background: transparent; color: var(--idal-red); }
+        .btn-outline { background: transparent; color: var(--idal-black); border-color: var(--idal-black); }
+        .btn-outline:hover { background: var(--idal-black); color: var(--idal-white); }
+
+        /* Header e Navigazione */
+        header { background: var(--idal-white); box-shadow: 0 4px 6px rgba(0,0,0,0.1); position: fixed; top: 0; width: 100%; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; max-width: 1200px; margin: 0 auto; }
+        .logo img { height: 60px; } /* Altezza del logo IDAL BAU */
+        .nav-links { display: flex; gap: 25px; align-items: center; }
+        .nav-links a { font-weight: 700; font-family: 'Montserrat', sans-serif; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--idal-red); }
+        
+        /* Language Toggle */
+        .lang-toggle { display: flex; border: 2px solid var(--idal-grey); border-radius: 20px; overflow: hidden; }
+        .lang-btn { background: transparent; border: none; padding: 5px 15px; cursor: pointer; font-weight: 700; font-family: 'Montserrat', sans-serif; transition: 0.3s; }
+        .lang-btn.active { background: var(--idal-red); color: var(--idal-white); }
+
+        /* Mobile Menu */
+        .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; }
+
+        /* Hero Section */
+        .hero { height: 100vh; background: linear-gradient(rgba(17,17,17,0.7), rgba(17,17,17,0.7)), url('images/hero-bg.jpg') center/cover; display: flex; align-items: center; text-align: center; color: var(--idal-white); padding-top: 80px; }
+        .hero h1 { font-size: 4rem; text-transform: uppercase; margin-bottom: 20px; }
+        .hero p { font-size: 1.5rem; margin-bottom: 40px; font-weight: 300; }
+        
+        /* Trust Bar */
+        .trust-bar { background: var(--idal-red); color: var(--idal-white); padding: 30px 0; }
+        .trust-grid { display: flex; justify-content: space-between; text-align: center; flex-wrap: wrap; gap: 20px; }
+        .trust-item { flex: 1; min-width: 250px; }
+        .trust-item i { font-size: 2.5rem; margin-bottom: 10px; }
+        .trust-item h3 { font-size: 1.2rem; }
+
+        /* Servizi Section */
+        .services { padding: 100px 0; background: var(--idal-light-grey); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-card { background: var(--idal-white); padding: 40px 30px; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; border-bottom: 4px solid transparent; }
+        .service-card:hover { transform: translateY(-10px); border-bottom: 4px solid var(--idal-red); }
+        .service-card i { font-size: 3rem; color: var(--idal-red); margin-bottom: 20px; }
+        .service-card h3 { margin-bottom: 15px; font-size: 1.4rem; }
+
+        /* Chi Siamo Section */
+        .about { padding: 100px 0; }
+        .about-flex { display: flex; gap: 50px; align-items: center; }
+        .about-text { flex: 1; }
+        .about-text h2 { font-size: 2.5rem; margin-bottom: 20px; color: var(--idal-black); }
+        .about-text p { margin-bottom: 20px; font-size: 1.1rem; }
+        .about-image { flex: 1; background: var(--idal-grey); height: 400px; border-radius: 8px; background: url('images/team.jpg') center/cover; }
+
+        /* Contatti Section */
+        .contact { padding: 100px 0; background: var(--idal-light-grey); }
+        .contact-flex { display: flex; gap: 50px; flex-wrap: wrap; }
+        .contact-info { flex: 1; min-width: 300px; }
+        .contact-info p { font-size: 1.2rem; margin-bottom: 20px; display: flex; align-items: center; gap: 15px; }
+        .contact-info i { color: var(--idal-red); font-size: 1.5rem; width: 30px; }
+        
+        .contact-form { flex: 1; min-width: 300px; background: var(--idal-white); padding: 40px; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Roboto', sans-serif; }
+        .contact-form input:focus, .contact-form textarea:focus { border-color: var(--idal-red); outline: none; }
+        .contact-form button { width: 100%; }
+
+        /* Footer */
+        footer { background: var(--idal-black); color: var(--idal-white); text-align: center; padding: 40px 20px; }
+        footer p { margin-bottom: 10px; color: #aaa; }
+        footer .brands { margin-top: 20px; font-size: 0.9rem; color: #777; }
+
+        /* WhatsApp Fluttuante */
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: #FFF; border-radius: 50px; padding: 15px 25px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); z-index: 1000; transition: 0.3s; }
+        .whatsapp-float:hover { background-color: #128C7E; transform: scale(1.05); }
+
+        /* Media Queries per Smartphone */
+        @media (max-width: 768px) {
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 90px; left: 0; width: 100%; background: var(--idal-white); padding: 20px 0; box-shadow: 0 10px 10px rgba(0,0,0,0.1); }
+            .nav-links.active { display: flex; }
+            .menu-toggle { display: block; }
+            .hero h1 { font-size: 2.5rem; }
+            .about-flex { flex-direction: column; }
+            .whatsapp-float { padding: 12px; font-size: 0; }
+            .whatsapp-float i { font-size: 2rem; margin: 0; } /* Nasconde il testo su mobile, lascia solo l'icona */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================= HEADER & NAVIGAZIONE ================= -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#home"><img src="images/logo.png" alt="IDAL BAU Logo"></a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="lang-it">Home</a>
+                <a href="#home" class="lang-de" style="display: none;">Startseite</a>
+                
+                <a href="#servizi" class="lang-it">Servizi</a>
+                <a href="#servizi" class="lang-de" style="display: none;">Dienstleistungen</a>
+                
+                <a href="#chisiamo" class="lang-it">Chi Siamo</a>
+                <a href="#chisiamo" class="lang-de" style="display: none;">Über uns</a>
+                
+                <a href="#contatti" class="btn lang-it" style="padding: 10px 20px;">Richiedi Preventivo</a>
+                <a href="#contatti" class="btn lang-de" style="display: none; padding: 10px 20px;">Angebot Anfordern</a>
+                
+                <!-- Toggle Bilingue -->
+                <div class="lang-toggle">
+                    <button id="btn-it" class="lang-btn active" onclick="setLang('it')">IT</button>
+                    <button id="btn-de" class="lang-btn" onclick="setLang('de')">DE</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home" class="hero">
+        <div class="container">
+            <!-- Testo Italiano -->
+            <div class="lang-it">
+                <h1>Costruiamo e Rinnoviamo<br>i Tuoi Spazi</h1>
+                <p>Ristrutturazioni chiavi in mano, opere murarie e impermeabilizzazioni a Merano e in tutto l'Alto Adige.</p>
+                <a href="#contatti" class="btn">Contattaci Ora</a>
+                <a href="#servizi" class="btn btn-outline" style="color: white; border-color: white; margin-left: 10px;">I Nostri Lavori</a>
+            </div>
+            <!-- Testo Tedesco -->
+            <div class="lang-de" style="display: none;">
+                <h1>Wir bauen und renovieren<br>Ihre Räume</h1>
+                <p>Schlüsselfertige Sanierungen, Maurerarbeiten und Abdichtungen in Meran und ganz Südtirol.</p>
+                <a href="#contatti" class="btn">Jetzt Kontaktieren</a>
+                <a href="#servizi" class="btn btn-outline" style="color: white; border-color: white; margin-left: 10px;">Unsere Arbeiten</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TRUST BAR ================= -->
+    <section class="trust-bar">
+        <div class="container trust-grid">
+            <div class="trust-item">
+                <i class="fas fa-hard-hat"></i>
+                <h3 class="lang-it">Esperienza & Sicurezza</h3>
+                <h3 class="lang-de" style="display: none;">Erfahrung & Sicherheit</h3>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-clipboard-check"></i>
+                <h3 class="lang-it">Preventivi Gratuiti</h3>
+                <h3 class="lang-de" style="display: none;">Kostenlose Angebote</h3>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-key"></i>
+                <h3 class="lang-it">Lavori Chiavi in Mano</h3>
+                <h3 class="lang-de" style="display: none;">Schlüsselfertige Projekte</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SERVIZI ================= -->
+    <section id="servizi" class="services">
+        <div class="container">
+            <h2 class="section-title lang-it">I Nostri <span>Servizi</span></h2>
+            <h2 class="section-title lang-de" style="display: none;">Unsere <span>Dienstleistungen</span></h2>
+
+            <div class="services-grid">
+                <!-- Servizio 1 -->
+                <div class="service-card">
+                    <i class="fas fa-home"></i>
+                    <h3 class="lang-it">Ristrutturazioni Chiavi in Mano</h3>
+                    <h3 class="lang-de" style="display: none;">Schlüsselfertige Sanierungen</h3>
+                    <p class="lang-it">Rifacimento completo di bagni, cucine e appartamenti. Dal massetto alle finiture, gestiamo l'intero progetto.</p>
+                    <p class="lang-de" style="display: none;">Komplette Badsanierung und Küchenumbau. Vom Estrich bis zum Feinschliff, wir verwalten das gesamte Projekt.</p>
+                </div>
+                <!-- Servizio 2 -->
+                <div class="service-card">
+                    <i class="fas fa-trowel-bricks"></i>
+                    <h3 class="lang-it">Opere Murarie & Demolizioni</h3>
+                    <h3 class="lang-de" style="display: none;">Maurer- & Abbrucharbeiten</h3>
+                    <p class="lang-it">Abbattimento e costruzione di tramezze, smaltimento macerie, consolidamento strutturale e scavi.</p>
+                    <p class="lang-de" style="display: none;">Abbruch und Aufbau von Trennwänden, Schuttentsorgung, statische Konsolidierung und Erdarbeiten.</p>
+                </div>
+                <!-- Servizio 3 -->
+                <div class="service-card">
+                    <i class="fas fa-water"></i>
+                    <h3 class="lang-it">Impermeabilizzazioni</h3>
+                    <h3 class="lang-de" style="display: none;">Abdichtungen</h3>
+                    <p class="lang-it">Risanamento completo di balconi e terrazze. Ricerca perdite d'acqua, posa di guaine e trattamenti protettivi.</p>
+                    <p class="lang-de" style="display: none;">Komplette Sanierung von Balkonen und Terrassen. Leckortung, Verlegung von Abdichtungsbahnen.</p>
+                </div>
+                <!-- Servizio 4 -->
+                <div class="service-card">
+                    <i class="fas fa-layer-group"></i>
+                    <h3 class="lang-it">Pavimentazioni</h3>
+                    <h3 class="lang-de" style="display: none;">Bodenbeläge</h3>
+                    <p class="lang-it">Posa di piastrelle, parquet e pavimentazioni esterne carrabili (porfido, betonelle, lastre di Luserna).</p>
+                    <p class="lang-de" style="display: none;">Verlegung von Fliesen, Parkett und befahrbaren Außenböden (Porphyr, Verbundsteinpflaster).</p>
+                </div>
+                <!-- Servizio 5 -->
+                <div class="service-card">
+                    <i class="fas fa-paint-roller"></i>
+                    <h3 class="lang-it">Cartongesso & Tinteggiature</h3>
+                    <h3 class="lang-de" style="display: none;">Trockenbau & Malerei</h3>
+                    <p class="lang-it">Controsoffitti, pareti isolanti, rasature a stucco, tinteggiatura interni e facciate esterne.</p>
+                    <p class="lang-de" style="display: none;">Abgehängte Decken, Isolierwände, Spachtelarbeiten, Innenanstriche und Außenfassaden.</p>
+                </div>
+                <!-- Servizio 6 -->
+                <div class="service-card">
+                    <i class="fas fa-building"></i>
+                    <h3 class="lang-it">Manutenzioni Condominiali</h3>
+                    <h3 class="lang-de" style="display: none;">Instandhaltung Wohnanlagen</h3>
+                    <p class="lang-it">Messa a norma, sostituzione porte tagliafuoco, risanamento facciate e griglie carrabili.</p>
+                    <p class="lang-de" style="display: none;">Normgerechte Anpassungen, Austausch von Brandschutztüren, Fassadensanierung und Gitterroste.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CHI SIAMO ================= -->
+    <section id="chisiamo" class="about">
+        <div class="container about-flex">
+            <div class="about-text">
+                <h2 class="lang-it">Oltre la costruzione, <span style="color: var(--idal-red);">la precisione.</span></h2>
+                <h2 class="lang-de" style="display: none;">Mehr als nur bauen: <span style="color: var(--idal-red);">Präzision.</span></h2>
+                
+                <p class="lang-it">Siamo <strong>IDAL BAU di Karasani Fatos</strong>. Operiamo a Merano e in tutto l'Alto Adige, garantendo un servizio di altissima qualità per privati, condomini e aziende. Che si tratti di riparare un'infiltrazione o di ristrutturare un'intera villa, il nostro approccio non cambia: materiali eccellenti, cantieri puliti e rispetto assoluto delle tempistiche.</p>
+                <p class="lang-it">Siamo orgogliosi di offrire un servizio perfettamente bilingue (Italiano e Tedesco) e di assistere i nostri clienti nelle pratiche per le detrazioni fiscali.</p>
+
+                <p class="lang-de" style="display: none;">Wir sind <strong>IDAL BAU von Karasani Fatos</strong>. Wir sind in Meran und ganz Südtirol tätig und garantieren Privatpersonen, Wohnanlagen und Unternehmen Dienstleistungen von höchster Qualität. Egal, ob es um die Reparatur eines Lecks oder die Sanierung einer ganzen Villa geht, unser Ansatz bleibt gleich: hervorragende Materialien, saubere Baustellen und absolute Einhaltung der Fristen.</p>
+                
+                <ul style="list-style: none; margin-top: 20px;">
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--idal-red); margin-right: 10px;"></i> <span class="lang-it">Materiali Certificati (Mapei, Röfix, Kerakoll)</span><span class="lang-de" style="display: none;">Zertifizierte Materialien</span></li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--idal-red); margin-right: 10px;"></i> <span class="lang-it">Interlocutore Unico per tutto il cantiere</span><span class="lang-de" style="display: none;">Einziger Ansprechpartner</span></li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--idal-red); margin-right: 10px;"></i> <span class="lang-it">Pronto Intervento per Emergenze</span><span class="lang-de" style="display: none;">Notdienst verfügbar</span></li>
+                </ul>
+            </div>
+            <!-- Usa una tua foto reale per "team.jpg" -->
+            <div class="about-image"></div>
+        </div>
+    </section>
+
+    <!-- ================= CONTATTI & MAPPA ================= -->
+    <section id="contatti" class="contact">
+        <div class="container">
+            <h2 class="section-title lang-it">Richiedi un <span>Sopralluogo</span></h2>
+            <h2 class="section-title lang-de" style="display: none;">Fordern Sie eine <span>Besichtigung an</span></h2>
+            
+            <div class="contact-flex">
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> IDAL BAU di Karasani Fatos<br>Via Portici 254 / Lauben 254<br>39012 Merano / Meran (BZ)</p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+393355652179">+39 335 565 2179</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@idalbau.it">info@idalbau.it</a></p>
+                    <p><i class="fas fa-file-invoice"></i> P.IVA: 03151460213</p>
+                </div>
+
+                <div class="contact-form">
+                    <!-- WEB3FORMS: Inserisci la tua Access Key qui sotto -->
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_GOES_HERE">
+                        <input type="hidden" name="redirect" value="https://idalbau.github.io/">
+                        <input type="checkbox" name="botcheck" style="display: none;">
+
+                        <input type="text" name="Nome" placeholder="Nome / Name" required>
+                        <input type="tel" name="Telefono" placeholder="Telefono / Telefon" required>
+                        <input type="email" name="Email" placeholder="Email">
+                        <textarea name="Messaggio" rows="4" placeholder="Come possiamo aiutarti? / Wie können wir Ihnen helfen?" required></textarea>
+                        
+                        <button type="submit" class="btn lang-it">Invia Richiesta</button>
+                        <button type="submit" class="btn lang-de" style="display: none;">Anfrage Senden</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 IDAL BAU di Karasani Fatos. <span class="lang-it">Tutti i diritti riservati.</span><span class="lang-de" style="display: none;">Alle Rechte vorbehalten.</span></p>
+            <p class="lang-it">Impresa edile specializzata in ristrutturazioni e opere murarie in Alto Adige.</p>
+            <p class="lang-de" style="display: none;">Bauunternehmen spezialisiert auf Sanierungen in Südtirol.</p>
+            <div class="brands">
+                Qualità garantita: Röfix | Mapei | Kerakoll
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= WHATSAPP FLUTTUANTE ================= -->
+    <a href="https://wa.me/393355652179" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i> <span class="lang-it">Contattaci</span><span class="lang-de" style="display: none;">WhatsApp</span>
+    </a>
+
+    <!-- ================= JAVASCRIPT (Menu & Lingue) ================= -->
+    <script>
+        // Gestione Menu Mobile
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Sistema Bilingue (Italiano / Tedesco)
+        function setLang(lang) {
+            // Aggiorna la classe attiva sui pulsanti
+            document.getElementById('btn-it').classList.remove('active');
+            document.getElementById('btn-de').classList.remove('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+
+            // Trova tutti gli elementi con le classi di lingua
+            let elementsIT = document.querySelectorAll('.lang-it');
+            let elementsDE = document.querySelectorAll('.lang-de');
+
+            if (lang === 'it') {
+                elementsIT.forEach(el => el.style.display = ''); // Mostra IT (usa il display di default: flex/block/inline)
+                elementsDE.forEach(el => el.style.display = 'none'); // Nascondi DE
+                document.documentElement.lang = 'it';
+            } else if (lang === 'de') {
+                elementsDE.forEach(el => el.style.display = ''); // Mostra DE
+                elementsIT.forEach(el => el.style.display = 'none'); // Nascondi IT
+                document.documentElement.lang = 'de';
+            }
+        }
+    </script>
+</body>
+</html>
