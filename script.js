@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Inizializza il Menu Mobile
     initMobileMenu();
+
+    // Inizializza Slideshow Hero
+    initHeroSlideshow();
 });
 
 function accettaCookie() {
@@ -90,4 +93,19 @@ function moveSlider(element) {
     if (handle) {
         handle.style.left = value + '%';
     }
+}
+
+// Hero Background Slideshow Logic
+function initHeroSlideshow() {
+    const slides = document.querySelectorAll('.hero-slide');
+    if (slides.length <= 1) return;
+    
+    let currentSlide = 0;
+    const slideInterval = 5000; // Change image every 5 seconds
+    
+    setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }, slideInterval);
 }
