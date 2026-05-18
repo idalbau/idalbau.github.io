@@ -25,8 +25,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TUO_CODICE_QUI"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-TUO_CODICE_QUI');</script>
+    <!-- ================= GOOGLE ANALYTICS ================= -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -47,8 +53,6 @@
                 <span class="lang-de" style="display:none;"><i class="far fa-clock"></i> Zeiten: Mo-Fr 07:30 -
                     18:00</span>
             </div>
-        </div>
-    </div>
         </div>
     </div>
 
@@ -128,12 +132,12 @@
             <p class="lang-de" style="display:none;">Wir dichten den Duschbereich ab und verlegen fachgerecht die neuen Boden- und Wandfliesen.</p>
         </div>
 
-        <div class="contact-form">
+        <div class="contact-form" id="contatti">
             <h3 class="lang-it" style="text-align: center; margin-bottom: 20px;">Richiedi un Preventivo per il tuo Bagno</h3>
             <h3 class="lang-de" style="display: none; text-align: center; margin-bottom: 20px;">Fordern Sie ein Angebot an</h3>
             <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_GOES_HERE">
-                <input type="hidden" name="redirect" value="https://idalbau.github.io/">
+                <input type="hidden" name="access_key" value="63cc33bc-343a-4ec1-b02f-4b836a57dfe5">
+                <input type="hidden" name="redirect" value="https://idalbau.github.io/grazie.html">
                 <input type="checkbox" name="botcheck" style="display: none;">
                 <input type="text" name="Nome" placeholder="Nome / Name" required>
                 <input type="tel" name="Telefono" placeholder="Telefono / Telefon" required>

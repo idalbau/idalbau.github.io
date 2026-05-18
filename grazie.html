@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grazie / Vielen Dank | IDAL BAU</title>
+    <meta name="description" content="Grazie per averci contattato. IDAL BAU di Karasani Fatos.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- ================= GOOGLE ANALYTICS ================= -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        }
+        
+        .success-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+        
+        .success-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            max-width: 600px;
+            width: 100%;
+            padding: 50px 40px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .success-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        /* Checkmark Animation */
+        .success-checkmark {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: block;
+            stroke-width: 3;
+            stroke: #D32F2F; /* primary idal red */
+            stroke-miterlimit: 10;
+            box-shadow: inset 0px 0px 0px #D32F2F;
+            animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+            margin: 0 auto 30px;
+        }
+        
+        .success-checkmark__circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 3;
+            stroke-miterlimit: 10;
+            stroke: #D32F2F;
+            fill: none;
+            animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        }
+        
+        .success-checkmark__check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.6s forwards;
+        }
+        
+        @keyframes stroke {
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+        @keyframes scale {
+            0%, 100% {
+                transform: none;
+            }
+            50% {
+                transform: scale3d(1.1, 1.1, 1);
+            }
+        }
+        @keyframes fill {
+            100% {
+                box-shadow: inset 0px 0px 0px 45px rgba(211, 47, 47, 0.08);
+            }
+        }
+        
+        .success-card h1 {
+            font-size: 2.2rem;
+            color: var(--idal-black);
+            margin-bottom: 20px;
+        }
+        
+        .success-card p {
+            color: var(--idal-grey);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .redirect-notice {
+            font-size: 0.95rem !important;
+            font-style: italic;
+            color: var(--idal-grey);
+            margin-bottom: 30px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .redirect-notice i {
+            color: var(--idal-red);
+            animation: spin 2s linear infinite;
+        }
+        
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+        
+        .btn-home {
+            background: var(--idal-red);
+            color: white !important;
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+        }
+        
+        .btn-home:hover {
+            background: var(--idal-red-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(183, 28, 28, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header semplice -->
+    <header style="padding: 15px 0; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+        <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="IDAL BAU Logo" style="height: 50px;"></a>
+            </div>
+            <div class="lang-switcher">
+                <button id="btn-it" onclick="setLang('it')" class="active">IT</button>
+                <button id="btn-de" onclick="setLang('de')">DE</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Success Container -->
+    <div class="success-wrapper">
+        <div class="success-card">
+            <!-- Animated SVG Checkmark -->
+            <svg class="success-checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="success-checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                <path class="success-checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+            
+            <!-- Italian Content -->
+            <div class="lang-it">
+                <h1>Messaggio Inviato!</h1>
+                <p>Grazie per averci contattato. Abbiamo ricevuto la tua richiesta e ti risponderemo al più presto con un preventivo gratuito personalizzato.</p>
+                <p class="redirect-notice">
+                    <i class="fas fa-spinner"></i>
+                    Sarai reindirizzato alla Home in <strong class="countdown-num">7</strong> secondi...
+                </p>
+                <a href="index.html" class="btn-home">
+                    <i class="fas fa-home"></i> Torna alla Home subito
+                </a>
+            </div>
+            
+            <!-- German Content -->
+            <div class="lang-de" style="display: none;">
+                <h1>Erfolgreich gesendet!</h1>
+                <p>Vielen Dank für Ihre Kontaktaufnahme. Wir haben Ihre Anfrage erhalten und werden uns so schnell wie möglich mit einem kostenlosen Angebot bei Ihnen melden.</p>
+                <p class="redirect-notice">
+                    <i class="fas fa-spinner"></i>
+                    Sie werden in <strong class="countdown-num">7</strong> Sekunden zur Startseite weitergeleitet...
+                </p>
+                <a href="index.html" class="btn-home">
+                    <i class="fas fa-home"></i> Sofort zur Startseite
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer semplice -->
+    <footer style="text-align: center; padding: 20px 0; border-top: 1px solid #eee; background: #fff; font-size: 0.9rem; color: var(--idal-grey);">
+        <p>&copy; 2026 IDAL BAU di Karasani Fatos.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Redirect timer logic
+        (function() {
+            let count = 7;
+            const countInterval = setInterval(() => {
+                count--;
+                if (count <= 0) {
+                    clearInterval(countInterval);
+                    window.location.href = "index.html";
+                    return;
+                }
+                document.querySelectorAll('.countdown-num').forEach(el => {
+                    el.textContent = count;
+                });
+            }, 1000);
+        })();
+    </script>
+</body>
+</html>

@@ -76,17 +76,16 @@ function initMobileMenu() {
     // Currently handled via inline onclick for simplicity in this small project
 }
 
-// Slider Prima/Dopo (Portfolio)
 function moveSlider(element) {
     const container = element.closest('.ba-slider');
     if (!container) return;
     
-    const afterImage = container.querySelector('.ba-after');
+    const beforeImage = container.querySelector('.ba-before');
     const handle = container.querySelector('.slider-handle');
     const value = element.value;
     
-    if (afterImage) {
-        afterImage.style.clipPath = `polygon(0 0, ${value}% 0, ${value}% 100%, 0 100%)`;
+    if (beforeImage) {
+        beforeImage.style.clipPath = `polygon(0 0, ${value}% 0, ${value}% 100%, 0 100%)`;
     }
     if (handle) {
         handle.style.left = value + '%';

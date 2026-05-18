@@ -21,6 +21,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 150px;
 }
 
 body {
@@ -735,12 +736,12 @@ footer {
 }
 
 .ba-slider .ba-before {
-    z-index: 1;
+    z-index: 2;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
 }
 
 .ba-slider .ba-after {
-    z-index: 2;
-    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    z-index: 1;
 }
 
 .ba-slider .slider-handle {
