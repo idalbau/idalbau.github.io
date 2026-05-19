@@ -34,6 +34,13 @@
         gtag('config', 'G-XXXXXXXXXX');
     </script>
 
+    <!-- ================= PERFORMANCE OPTIMIZATIONS ================= -->
+    <link rel="preload" as="image" href="images/logo.png">
+    <link rel="prefetch" href="index.html">
+    <link rel="prefetch" href="chi-siamo.html">
+    <link rel="prefetch" href="portfolio.html">
+    <link rel="prefetch" href="impermeabilizzazioni-bolzano.html">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -67,14 +74,14 @@
                 <a href="index.html" class="lang-de" style="display: none;">Startseite</a>
 
                 <div class="dropdown">
-                    <a class="lang-it">Servizi <i class="fas fa-chevron-down"></i></a>
-                    <a class="lang-de" style="display: none;">Dienstleistungen <i class="fas fa-chevron-down"></i></a>
+                    <a class="lang-it active">Servizi <i class="fas fa-chevron-down"></i></a>
+                    <a class="lang-de active" style="display: none;">Dienstleistungen <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
                         <a href="index.html#servizi" class="lang-it dropdown-item primary">Tutti i Servizi</a>
                         <a href="index.html#servizi" class="lang-de dropdown-item primary" style="display: none;">Alle Dienstleistungen</a>
 
-                        <a href="ristrutturazione-bagno-merano.html" class="lang-it dropdown-item secondary">Ristrutturazioni Bagni Merano</a>
-                        <a href="ristrutturazione-bagno-merano.html" class="lang-de dropdown-item secondary" style="display: none;">Badsanierung Meran</a>
+                        <a href="ristrutturazione-bagno-merano.html" class="lang-it dropdown-item secondary active">Ristrutturazioni Bagni Merano</a>
+                        <a href="ristrutturazione-bagno-merano.html" class="lang-de dropdown-item secondary active" style="display: none;">Badsanierung Meran</a>
 
                         <a href="impermeabilizzazioni-bolzano.html" class="lang-it dropdown-item secondary">Impermeabilizzazioni Bolzano</a>
                         <a href="impermeabilizzazioni-bolzano.html" class="lang-de dropdown-item secondary" style="display: none;">Abdichtungen Bozen</a>
@@ -109,6 +116,11 @@
                     <button id="btn-de" onclick="setLang('de')">DE</button>
                 </div>
             </nav>
+
+            <!-- Mobile Toggle -->
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </header>
 

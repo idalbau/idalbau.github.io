@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Inizializza Slideshow Hero
     initHeroSlideshow();
+
+    // Inizializza il Gestore dello Scroll (Header e Progress Bar)
+    initScrollHandler();
 });
 
 function accettaCookie() {
@@ -75,8 +78,51 @@ function initReveal() {
 
 // Mobile Menu Logic
 function initMobileMenu() {
-    // Toggling mobile menu if needed
-    // Currently handled via inline onclick for simplicity in this small project
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    if (mobileToggle && navLinks) {
+        // Toggle mobile drawer
+        mobileToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            const isActive = navLinks.classList.toggle('active');
+            document.body.classList.toggle('menu-open', isActive);
+        });
+
+        // Close drawer when clicking outside
+        document.addEventListener('click', function (e) {
+            if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !e.target.closest('.mobile-toggle')) {
+                navLinks.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+        });
+
+        // Close drawer when clicking a standard navigation link (but not the dropdown toggle)
+        const links = navLinks.querySelectorAll('a:not(.dropdown > a)');
+        links.forEach(link => {
+            link.addEventListener('click', function () {
+                if (window.innerWidth <= 900) {
+                    navLinks.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                }
+            });
+        });
+    }
+
+    // Handle mobile dropdown click
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        const triggers = dropdown.querySelectorAll('a:not(.dropdown-content a)');
+        triggers.forEach(trigger => {
+            trigger.addEventListener('click', function (e) {
+                if (window.innerWidth <= 900) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdown.classList.toggle('open');
+                }
+            });
+        });
+    });
 }
 
 function moveSlider(element) {
@@ -108,4 +154,42 @@ function initHeroSlideshow() {
         currentSlide = (currentSlide + 1) % slides.length;
         slides[currentSlide].classList.add('active');
     }, slideInterval);
+}
+
+// Throttled scroll handler for premium shrinking header and dynamic progress indicator
+function initScrollHandler() {
+    const header = document.querySelector('header');
+    if (!header) return;
+
+    // Programmatically create and append the scroll progress bar to keep HTML clean & DRY
+    let progress = document.getElementById('idal-scroll-progress');
+    if (!progress) {
+        progress = document.createElement('div');
+        progress.id = 'idal-scroll-progress';
+        header.appendChild(progress);
+    }
+
+    let ticking = false;
+
+    window.addEventListener('scroll', function () {
+        if (!ticking) {
+            window.requestAnimationFrame(function () {
+                // Shrinking Header Toggling
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+
+                // Scroll Progress Calculation
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+                progress.style.width = scrolled + '%';
+
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
 }

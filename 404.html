@@ -22,6 +22,10 @@
         gtag('config', 'G-XXXXXXXXXX');
     </script>
 
+    <!-- ================= PERFORMANCE OPTIMIZATIONS ================= -->
+    <link rel="preload" as="image" href="images/logo.png">
+    <link rel="prefetch" href="index.html">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -94,7 +98,7 @@
                     <button id="btn-de" onclick="setLang('de')" aria-label="Deutsch">DE</button>
                 </div>
             </nav>
-            <div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')" aria-label="Menu">
+            <div class="mobile-toggle" aria-label="Menu">
                 <i class="fas fa-bars"></i>
             </div>
         </div>

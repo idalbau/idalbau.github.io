@@ -86,6 +86,16 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
+    transition: background 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                backdrop-filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+header.scrolled {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .nav-container {
@@ -95,11 +105,32 @@ header {
     padding: 15px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    transition: padding 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+header.scrolled .nav-container {
+    padding: 6px 20px;
 }
 
 .logo img {
     height: 120px;
-    transition: var(--transition);
+    transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+header.scrolled .logo img {
+    height: 65px;
+}
+
+/* Dynamic Scroll Progress Bar */
+#idal-scroll-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: var(--idal-red);
+    width: 0%;
+    z-index: 1001;
+    transition: width 0.1s ease-out;
 }
 
 .nav-links {
@@ -118,8 +149,10 @@ header {
     letter-spacing: 0.5px;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--idal-red);
+    font-weight: 700;
 }
 
 .nav-links .btn {
@@ -383,6 +416,28 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 28px;
+}
+
+@media (min-width: 901px) {
+    .services-grid > .service-card:last-child {
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 30px;
+        padding: 30px 40px;
+    }
+    .services-grid > .service-card:last-child i {
+        font-size: 3.5rem;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+    .services-grid > .service-card:last-child h3 {
+        margin-bottom: 6px;
+    }
+    .services-grid > .service-card:last-child p {
+        margin-bottom: 0;
+    }
 }
 
 .service-card {
@@ -965,21 +1020,53 @@ footer {
     }
 
     .nav-links {
-        display: none;
+        display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 320px;
+        height: 100vh;
         background: var(--idal-white);
-        padding: 20px 0;
-        box-shadow: var(--shadow-lg);
-        z-index: 999;
+        padding: 90px 0 40px;
+        box-shadow: -4px 0 25px rgba(0, 0, 0, 0.15);
+        z-index: 1001;
         gap: 0;
+        transform: translate3d(100%, 0, 0);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: transform;
+        overflow-y: auto;
     }
 
     .nav-links.active {
-        display: flex;
+        transform: translate3d(0, 0, 0);
+    }
+
+    /* Mobile Drawer Backdrop Blur & Scroll Lock */
+    body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                    visibility 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 1000;
+    }
+
+    body.menu-open {
+        overflow: hidden !important;
+    }
+
+    body.menu-open::after {
+        opacity: 1;
+        visibility: visible;
     }
 
     .nav-links a {
@@ -1002,6 +1089,7 @@ footer {
     }
 
     .dropdown-content {
+        display: none;
         position: static;
         box-shadow: none;
         border-top: none;
@@ -1011,7 +1099,19 @@ footer {
     }
 
     .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
         display: block;
+    }
+
+    .dropdown > a i {
+        transition: transform 0.3s ease;
+    }
+
+    .dropdown.open > a i {
+        transform: rotate(180deg);
     }
 
     .top-bar-flex {
