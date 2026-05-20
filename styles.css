@@ -273,7 +273,8 @@ header.scrolled .logo img {
 
 .lang-switcher button.active,
 .lang-toggle button.active,
-.lang-btn.active {
+.lang-btn.active,
+.nav-links .lang-btn.active {
     background: var(--idal-red);
     color: white;
     border-color: var(--idal-red);
