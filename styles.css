@@ -1103,7 +1103,8 @@ footer {
         display: none;
     }
 
-    .dropdown.open .dropdown-content {
+    .dropdown.open .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
         display: block;
     }
 
@@ -1111,7 +1112,8 @@ footer {
         transition: transform 0.3s ease;
     }
 
-    .dropdown.open > a i {
+    .dropdown.open > a i,
+    .dropdown:focus-within > a i {
         transform: rotate(180deg);
     }
 

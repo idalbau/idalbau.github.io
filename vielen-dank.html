@@ -168,6 +168,30 @@
             box-shadow: 0 6px 20px rgba(183, 28, 28, 0.4);
         }
     </style>
+    <!-- ================= NOSCRIPT FALLBACK ================= -->
+    <noscript>
+        <style>
+            /* Reveal animations visible by default */
+            .reveal { opacity: 1 !important; transform: none !important; }
+            /* Hide Cookie Banner via Checkbox Hack */
+            .cookie-checkbox:checked ~ .cookie-banner { display: none !important; }
+            /* Mobile menu open via Checkbox Hack */
+            .nav-container:has(.mobile-menu-checkbox:checked) .nav-links { transform: translate3d(0, 0, 0) !important; }
+            body:has(.mobile-menu-checkbox:checked) { overflow: hidden !important; }
+            body:has(.mobile-menu-checkbox:checked)::after { opacity: 1 !important; visibility: visible !important; }
+            /* Slideshow pure CSS animation fallback */
+            .hero-slide { opacity: 0; animation: jsless-slideshow 20s infinite; }
+            .hero-slide:nth-child(1) { animation-delay: 0s; }
+            .hero-slide:nth-child(2) { animation-delay: 5s; }
+            .hero-slide:nth-child(3) { animation-delay: 10s; }
+            .hero-slide:nth-child(4) { animation-delay: 15s; }
+            @keyframes jsless-slideshow {
+                0%, 20% { opacity: 1; z-index: 2; }
+                25%, 95% { opacity: 0; z-index: 1; }
+                100% { opacity: 1; z-index: 2; }
+            }
+        </style>
+    </noscript>
 </head>
 <body>
 

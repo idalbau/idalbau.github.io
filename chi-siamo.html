@@ -49,6 +49,30 @@
     <link rel="prefetch" href="ristrutturazione-bagno-merano.html">
 
     <link rel="stylesheet" href="styles.css">
+    <!-- ================= NOSCRIPT FALLBACK ================= -->
+    <noscript>
+        <style>
+            /* Reveal animations visible by default */
+            .reveal { opacity: 1 !important; transform: none !important; }
+            /* Hide Cookie Banner via Checkbox Hack */
+            .cookie-checkbox:checked ~ .cookie-banner { display: none !important; }
+            /* Mobile menu open via Checkbox Hack */
+            .nav-container:has(.mobile-menu-checkbox:checked) .nav-links { transform: translate3d(0, 0, 0) !important; }
+            body:has(.mobile-menu-checkbox:checked) { overflow: hidden !important; }
+            body:has(.mobile-menu-checkbox:checked)::after { opacity: 1 !important; visibility: visible !important; }
+            /* Slideshow pure CSS animation fallback */
+            .hero-slide { opacity: 0; animation: jsless-slideshow 20s infinite; }
+            .hero-slide:nth-child(1) { animation-delay: 0s; }
+            .hero-slide:nth-child(2) { animation-delay: 5s; }
+            .hero-slide:nth-child(3) { animation-delay: 10s; }
+            .hero-slide:nth-child(4) { animation-delay: 15s; }
+            @keyframes jsless-slideshow {
+                0%, 20% { opacity: 1; z-index: 2; }
+                25%, 95% { opacity: 0; z-index: 1; }
+                100% { opacity: 1; z-index: 2; }
+            }
+        </style>
+    </noscript>
 </head>
 <body>
 
@@ -141,8 +165,8 @@
     <div id="cookieBanner" class="cookie-banner">
         <p>Utilizziamo i cookie per offrirti la migliore esperienza sul nostro sito e per analizzare il traffico. Leggi la nostra <a href="cookie-policy.html">Cookie Policy</a>.</p>
         <div class="cookie-buttons">
-            <button class="btn-accept" onclick="accettaCookie()">Accetta</button>
-            <button class="btn-reject" onclick="rifiutaCookie()">Rifiuta</button>
+            <label for="cookie-toggle" class="btn-accept" onclick="accettaCookie()">Accetta</label>
+            <label for="cookie-toggle" class="btn-reject" onclick="rifiutaCookie()">Rifiuta</label>
         </div>
     </div>
 
