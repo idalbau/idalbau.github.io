@@ -1177,3 +1177,45 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* ================= ABOUT CHECKLIST GRID ================= */
+.about-checklist {
+    list-style: none;
+    padding: 0;
+}
+.about-checklist li {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 4px 10px;
+    margin-bottom: 20px;
+}
+.about-checklist li i {
+    grid-column: 1;
+    grid-row: 1;
+    color: var(--idal-red);
+    margin-top: 4px;
+}
+.about-checklist li strong {
+    grid-column: 2;
+    grid-row: 1;
+    color: inherit;
+}
+.about-checklist li span.desc {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+@media (min-width: 768px) {
+    .about-checklist li {
+        grid-template-columns: 24px 230px 1fr;
+        align-items: start;
+    }
+    .about-checklist li strong {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .about-checklist li span.desc {
+        grid-column: 3;
+        grid-row: 1;
+    }
+}
