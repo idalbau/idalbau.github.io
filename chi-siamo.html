@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="HLD8cy2vvzONBcl6k59KqzrnBDxmYVXYlsPNJVeZzLU" />
-    <title>Chi Siamo | Über uns | IDAL BAU Merano</title>
+    <title>Chi Siamo | Impresa Edile IDAL BAU Merano</title>
     <meta name="description" content="Scopri IDAL BAU di Karasani Fatos: impresa edile a Merano specializzata in ristrutturazioni, impermeabilizzazioni e opere murarie in Alto Adige.">
+    
     <link rel="canonical" href="https://idalbau.github.io/chi-siamo.html" />
+    <link rel="alternate" hreflang="it" href="https://idalbau.github.io/chi-siamo.html" />
+    <link rel="alternate" hreflang="de" href="https://idalbau.github.io/ueber-uns.html" />
+    
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- Open Graph / Facebook -->
@@ -28,8 +32,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+    <!-- ================= GOOGLE ANALYTICS ================= -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXXM8ZF82P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-FXXM8ZF82P');
+    </script>
 
     <!-- ================= PERFORMANCE OPTIMIZATIONS ================= -->
     <link rel="preload" as="image" href="images/logo.png">
@@ -46,14 +56,14 @@
     <div class="top-bar">
         <div class="container top-bar-flex">
             <div class="top-bar-left">
-                <a href="tel:+393355652179">
+                <a href="tel:+393355652179"
+                    onclick="gtag('event', 'click_telefono', {'event_category': 'Contatto', 'event_label': 'TopBar_Call'});">
                     <i class="fas fa-phone-alt"></i> +39 335 565 2179
                 </a>
                 <a href="mailto:info@idalbau.it"><i class="fas fa-envelope"></i> info@idalbau.it</a>
             </div>
             <div class="top-bar-right">
-                <span class="lang-it"><i class="far fa-clock"></i> Orario: Lun-Ven 07:30 - 18:00</span>
-                <span class="lang-de" style="display:none;"><i class="far fa-clock"></i> Zeiten: Mo-Fr 07:30 - 18:00</span>
+                <span><i class="far fa-clock"></i> Orario: Lun-Ven 07:30 - 18:00</span>
             </div>
         </div>
     </div>
@@ -66,48 +76,28 @@
             </div>
 
             <nav class="nav-links" id="navLinks">
-                <a href="index.html" class="lang-it">Home</a>
-                <a href="index.html" class="lang-de" style="display: none;">Startseite</a>
+                <a href="index.html">Home</a>
 
                 <div class="dropdown">
-                    <a class="lang-it">Servizi <i class="fas fa-chevron-down"></i></a>
-                    <a class="lang-de" style="display: none;">Dienstleistungen <i class="fas fa-chevron-down"></i></a>
+                    <a>Servizi <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="index.html#servizi" class="lang-it dropdown-item primary">Tutti i Servizi</a>
-                        <a href="index.html#servizi" class="lang-de dropdown-item primary" style="display: none;">Alle Dienstleistungen</a>
-
-                        <a href="ristrutturazione-bagno-merano.html" class="lang-it dropdown-item secondary">Ristrutturazioni Bagni Merano</a>
-                        <a href="ristrutturazione-bagno-merano.html" class="lang-de dropdown-item secondary" style="display: none;">Badsanierung Meran</a>
-
-                        <a href="impermeabilizzazioni-bolzano.html" class="lang-it dropdown-item secondary">Impermeabilizzazioni Bolzano</a>
-                        <a href="impermeabilizzazioni-bolzano.html" class="lang-de dropdown-item secondary" style="display: none;">Abdichtungen Bozen</a>
-
-                        <a href="index.html#opere-murarie" class="lang-it dropdown-item secondary">Opere Murarie & Demolizioni</a>
-                        <a href="index.html#opere-murarie" class="lang-de dropdown-item secondary" style="display: none;">Maurer- & Abbrucharbeiten</a>
-
-                        <a href="index.html#pavimentazioni" class="lang-it dropdown-item secondary">Posa Pavimentazioni & Piastrelle</a>
-                        <a href="index.html#pavimentazioni" class="lang-de dropdown-item secondary" style="display: none;">Bodenbeläge & Fliesenarbeiten</a>
-
-                        <a href="index.html#cartongesso" class="lang-it dropdown-item secondary">Opere in Cartongesso & Tinteggiatura</a>
-                        <a href="index.html#cartongesso" class="lang-de dropdown-item secondary" style="display: none;">Trockenbau & Malereiarbeiten</a>
-
-                        <a href="index.html#manutenzioni-condominiali" class="lang-it dropdown-item secondary">Manutenzioni Condominiali</a>
-                        <a href="index.html#manutenzioni-condominiali" class="lang-de dropdown-item secondary" style="display: none;">Instandhaltung Wohnanlagen</a>
+                        <a href="index.html#servizi" class="dropdown-item primary">Tutti i Servizi</a>
+                        <a href="ristrutturazione-bagno-merano.html" class="dropdown-item secondary">Ristrutturazioni Bagni Merano</a>
+                        <a href="impermeabilizzazioni-bolzano.html" class="dropdown-item secondary">Impermeabilizzazioni Bolzano</a>
+                        <a href="index.html#opere-murarie" class="dropdown-item secondary">Opere Murarie & Demolizioni</a>
+                        <a href="index.html#pavimentazioni" class="dropdown-item secondary">Posa Pavimentazioni & Piastrelle</a>
+                        <a href="index.html#cartongesso" class="dropdown-item secondary">Opere in Cartongesso & Tinteggiatura</a>
+                        <a href="index.html#manutenzioni-condominiali" class="dropdown-item secondary">Manutenzioni Condominiali</a>
                     </div>
                 </div>
 
-                <a href="chi-siamo.html" class="lang-it active">Chi Siamo</a>
-                <a href="chi-siamo.html" class="lang-de active" style="display: none;">Über uns</a>
-
-                <a href="portfolio.html" class="lang-it">Esempi</a>
-                <a href="portfolio.html" class="lang-de" style="display: none;">Beispiele</a>
-
-                <a href="index.html#contatti" class="btn lang-it">Preventivo Gratuito</a>
-                <a href="index.html#contatti" class="btn lang-de" style="display: none;">Kostenloses Angebot</a>
+                <a href="chi-siamo.html" class="active">Chi Siamo</a>
+                <a href="portfolio.html">Esempi</a>
+                <a href="index.html#contatti" class="btn">Preventivo Gratuito</a>
 
                 <div class="lang-switcher">
-                    <button id="btn-it" onclick="setLang('it')" class="active" aria-label="Italiano">IT</button>
-                    <button id="btn-de" onclick="setLang('de')" aria-label="Deutsch">DE</button>
+                    <a href="chi-siamo.html" class="lang-btn active">IT</a>
+                    <a href="ueber-uns.html" class="lang-btn">DE</a>
                 </div>
             </nav>
             <div class="mobile-toggle" aria-label="Menu">
@@ -118,33 +108,22 @@
 
     <div class="page-header">
         <div class="container">
-            <h1 class="lang-it">La Nostra Azienda</h1>
-            <h1 class="lang-de" style="display:none;">Unser Unternehmen</h1>
+            <h1>La Nostra Azienda</h1>
         </div>
     </div>
 
     <div class="container content">
-        <h2 class="lang-it" style="margin-bottom: 20px; color: var(--idal-red);">Fatos Karasani &amp; IDAL BAU</h2>
-        <h2 class="lang-de" style="display:none; margin-bottom: 20px; color: var(--idal-red);">Fatos Karasani &amp; IDAL BAU</h2>
+        <h2 style="margin-bottom: 20px; color: var(--idal-red);">Fatos Karasani &amp; IDAL BAU</h2>
 
-        <p class="lang-it">Siamo <strong>IDAL BAU di Karasani Fatos</strong>. Operiamo a Merano e in tutto l'Alto Adige, garantendo un servizio di altissima qualità per privati, condomini e aziende. Che si tratti di riparare un'infiltrazione o di ristrutturare un'intera villa, il nostro approccio non cambia: materiali eccellenti, cantieri puliti e rispetto assoluto delle tempistiche.</p>
-        <p class="lang-it">Siamo orgogliosi di offrire un servizio perfettamente bilingue (Italiano e Tedesco) e di assistere i nostri clienti nelle pratiche per le detrazioni fiscali.</p>
-
-        <p class="lang-de" style="display: none;">Wir sind <strong>IDAL BAU von Karasani Fatos</strong>. Wir sind in Meran und ganz Südtirol tätig und garantieren Privatpersonen, Wohnanlagen und Unternehmen Dienstleistungen von höchster Qualität. Egal, ob es um die Reparatur eines Lecks oder die Sanierung einer ganzen Villa geht, unser Ansatz bleibt gleich: hervorragende Materialien, saubere Baustellen und absolute Einhaltung der Termine.</p>
-        <p class="lang-de" style="display: none;">Wir sind stolz darauf, einen perfekt zweisprachigen Service (Italienisch und Deutsch) anzubieten und unsere Kunden bei den Verfahren für Steuerabzüge zu unterstützen.</p>
+        <p>Siamo <strong>IDAL BAU di Karasani Fatos</strong>. Operiamo a Merano e in tutto l'Alto Adige, garantendo un servizio di altissima qualità per privati, condomini e aziende. Che si tratti di riparare un'infiltrazione o di ristrutturare un'intera villa, il nostro approccio non cambia: materiali eccellenti, cantieri puliti e rispetto assoluto delle tempistiche.</p>
+        <p>Siamo orgogliosi di offrire un servizio perfettamente bilingue (Italiano e Tedesco) e di assistere i nostri clienti nelle pratiche per le detrazioni fiscali.</p>
 
         <br>
-        <h3 class="lang-it">I nostri valori fondamentali:</h3>
-        <h3 class="lang-de" style="display:none;">Unsere Grundwerte:</h3>
+        <h3>I nostri valori fondamentali:</h3>
         <ul class="about-checklist" style="margin-top: 15px; justify-content: flex-start;">
-            <li class="lang-it"><i class="fas fa-check-circle"></i> <strong>Precisione e Pulizia:</strong> Un cantiere ordinato è sinonimo di un lavoro ben fatto.</li>
-            <li class="lang-de" style="display:none;"><i class="fas fa-check-circle"></i> <strong>Präzision und Sauberkeit:</strong> Eine ordentliche Baustelle ist gleichbedeutend mit guter Arbeit.</li>
-
-            <li class="lang-it"><i class="fas fa-check-circle"></i> <strong>Materiali di Prima Scelta:</strong> Non scendiamo a compromessi sulla qualità. Utilizziamo esclusivamente prodotti certificati e materiali di altissima qualità per garantire risultati eccellenti e duraturi.</li>
-            <li class="lang-de" style="display:none;"><i class="fas fa-check-circle"></i> <strong>Erstklassige Materialien:</strong> Wir gehen keine Kompromisse bei der Qualität ein. Wir verwenden ausschließlich zertifizierte Produkte und hochwertigste Materialien.</li>
-
-            <li class="lang-it"><i class="fas fa-check-circle"></i> <strong>Rispetto delle Tempistiche:</strong> Il tempo del cliente è prezioso. Rispettiamo le date di consegna pattuite.</li>
-            <li class="lang-de" style="display:none;"><i class="fas fa-check-circle"></i> <strong>Einhaltung von Fristen:</strong> Die Zeit unserer Kunden ist wertvoll. Wir halten vereinbarte Termine ein.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Precisione e Pulizia:</strong> Un cantiere ordinato è sinonimo di un lavoro ben fatto.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Materiali di Prima Scelta:</strong> Non scendiamo a compromessi sulla qualità. Utilizziamo esclusivamente prodotti certificati e materiali di altissima qualità per garantire risultati eccellenti e duraturi.</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Rispetto delle Tempistiche:</strong> Il tempo del cliente è prezioso. Rispettiamo le date di consegna pattuite.</li>
         </ul>
     </div>
 
@@ -160,18 +139,17 @@
     </footer>
 
     <div id="cookieBanner" class="cookie-banner">
-        <p class="lang-it">Utilizziamo i cookie per offrirti la migliore esperienza sul nostro sito e per analizzare il traffico. Leggi la nostra <a href="cookie-policy.html">Cookie Policy</a>.</p>
-        <p class="lang-de" style="display: none;">Wir verwenden Cookies, um Ihnen das beste Erlebnis auf unserer Website zu bieten. Lesen Sie unsere <a href="cookie-policy.html">Cookie-Richtlinie</a>.</p>
+        <p>Utilizziamo i cookie per offrirti la migliore esperienza sul nostro sito e per analizzare il traffico. Leggi la nostra <a href="cookie-policy.html">Cookie Policy</a>.</p>
         <div class="cookie-buttons">
-            <button class="btn-accept" onclick="accettaCookie()">Accetta / Akzeptieren</button>
-            <button class="btn-reject" onclick="rifiutaCookie()">Rifiuta / Ablehnen</button>
+            <button class="btn-accept" onclick="accettaCookie()">Accetta</button>
+            <button class="btn-reject" onclick="rifiutaCookie()">Rifiuta</button>
         </div>
     </div>
 
-    <a href="https://wa.me/393355652179" class="whatsapp-float" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-        <span class="lang-it">Scrivici</span>
-        <span class="lang-de" style="display:none;">WhatsApp</span>
+    <!-- ================= WHATSAPP FLOATING PULSANTE ================= -->
+    <a href="https://wa.me/393355652179" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        onclick="gtag('event', 'click_whatsapp', {'event_category': 'Lead', 'event_label': 'WhatsApp_Pulsante'});">
+        <i class="fab fa-whatsapp"></i> <span>Scrivici</span>
     </a>
 
     <script src="script.js"></script>

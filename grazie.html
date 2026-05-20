@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grazie / Vielen Dank | IDAL BAU</title>
+    <title>Grazie | IDAL BAU</title>
     <meta name="description" content="Grazie per averci contattato. IDAL BAU di Karasani Fatos.">
+    <link rel="canonical" href="https://idalbau.github.io/grazie.html" />
+    <link rel="alternate" hreflang="it" href="https://idalbau.github.io/grazie.html" />
+    <link rel="alternate" hreflang="de" href="https://idalbau.github.io/vielen-dank.html" />
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,12 +20,12 @@
     <link rel="stylesheet" href="styles.css">
     
     <!-- ================= GOOGLE ANALYTICS ================= -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXXM8ZF82P"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FXXM8ZF82P');
     </script>
     
     <style>
@@ -175,8 +178,8 @@
                 <a href="index.html"><img src="images/logo.png" alt="IDAL BAU Logo" style="height: 50px;"></a>
             </div>
             <div class="lang-switcher">
-                <button id="btn-it" onclick="setLang('it')" class="active">IT</button>
-                <button id="btn-de" onclick="setLang('de')">DE</button>
+                <a href="grazie.html" class="lang-btn active">IT</a>
+                <a href="vielen-dank.html" class="lang-btn">DE</a>
             </div>
         </div>
     </header>
@@ -191,7 +194,7 @@
             </svg>
             
             <!-- Italian Content -->
-            <div class="lang-it">
+            <div>
                 <h1>Messaggio Inviato!</h1>
                 <p>Grazie per averci contattato. Abbiamo ricevuto la tua richiesta e ti risponderemo al più presto con un preventivo gratuito personalizzato.</p>
                 <p class="redirect-notice">
@@ -200,19 +203,6 @@
                 </p>
                 <a href="index.html" class="btn-home">
                     <i class="fas fa-home"></i> Torna alla Home subito
-                </a>
-            </div>
-            
-            <!-- German Content -->
-            <div class="lang-de" style="display: none;">
-                <h1>Erfolgreich gesendet!</h1>
-                <p>Vielen Dank für Ihre Kontaktaufnahme. Wir haben Ihre Anfrage erhalten und werden uns so schnell wie möglich mit einem kostenlosen Angebot bei Ihnen melden.</p>
-                <p class="redirect-notice">
-                    <i class="fas fa-spinner"></i>
-                    Sie werden in <strong class="countdown-num">7</strong> Sekunden zur Startseite weitergeleitet...
-                </p>
-                <a href="index.html" class="btn-home">
-                    <i class="fas fa-home"></i> Sofort zur Startseite
                 </a>
             </div>
         </div>

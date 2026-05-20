@@ -5,10 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
         banner.style.display = "block";
     }
 
-    // Inizializza la lingua salvata (di default 'it')
-    const savedLang = localStorage.getItem("siteLanguage") || "it";
-    setLang(savedLang);
-
     // Inizializza le animazioni Reveal al caricamento
     initReveal();
 
@@ -32,28 +28,6 @@ function rifiutaCookie() {
     localStorage.setItem("cookieAccettati", "false");
     const banner = document.getElementById("cookieBanner");
     if (banner) banner.style.display = "none";
-}
-
-// Sistema Bilingue Dinamico
-function setLang(lang) {
-    localStorage.setItem("siteLanguage", lang);
-
-    const btnIt = document.getElementById('btn-it');
-    const btnDe = document.getElementById('btn-de');
-    if (btnIt) btnIt.classList.toggle('active', lang === 'it');
-    if (btnDe) btnDe.classList.toggle('active', lang === 'de');
-
-    document.documentElement.lang = lang;
-
-    const elementsIT = document.querySelectorAll('.lang-it');
-    const elementsDE = document.querySelectorAll('.lang-de');
-
-    elementsIT.forEach(el => {
-        el.style.display = (lang === 'it') ? '' : 'none';
-    });
-    elementsDE.forEach(el => {
-        el.style.display = (lang === 'de') ? '' : 'none';
-    });
 }
 
 // Reveal Animations Logic
