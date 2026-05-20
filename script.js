@@ -148,10 +148,10 @@ function initScrollHandler() {
     window.addEventListener('scroll', function () {
         if (!ticking) {
             window.requestAnimationFrame(function () {
-                // Shrinking Header Toggling
-                if (window.scrollY > 50) {
+                // Shrinking Header Toggling with Hysteresis to prevent jitter loop
+                if (window.scrollY > 120) {
                     header.classList.add('scrolled');
-                } else {
+                } else if (window.scrollY < 20) {
                     header.classList.remove('scrolled');
                 }
 
