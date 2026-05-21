@@ -118,7 +118,7 @@ function initMobileMenu() {
     });
 }
 
-function moveSlider(element) {
+window.moveSlider = function(element) {
     const container = element.closest('.ba-slider');
     if (!container) return;
     
@@ -132,7 +132,7 @@ function moveSlider(element) {
     if (handle) {
         handle.style.left = value + '%';
     }
-}
+};
 
 // Hero Background Slideshow Logic
 function initHeroSlideshow() {
