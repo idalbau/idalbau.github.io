@@ -18,17 +18,17 @@ document.addEventListener("DOMContentLoaded", function () {
     initScrollHandler();
 });
 
-function accettaCookie() {
+window.accettaCookie = function() {
     localStorage.setItem("cookieAccettati", "true");
     const banner = document.getElementById("cookieBanner");
     if (banner) banner.style.display = "none";
-}
+};
 
-function rifiutaCookie() {
+window.rifiutaCookie = function() {
     localStorage.setItem("cookieAccettati", "false");
     const banner = document.getElementById("cookieBanner");
     if (banner) banner.style.display = "none";
-}
+};
 
 // Reveal Animations Logic
 function initReveal() {

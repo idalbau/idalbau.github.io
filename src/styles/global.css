@@ -22,6 +22,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 150px;
+    overflow-x: hidden;
 }
 
 body {
@@ -30,6 +31,7 @@ body {
     background: var(--idal-white);
     line-height: 1.6;
     padding-top: 0;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -1083,12 +1085,12 @@ footer {
     .nav-links .btn {
         margin: 12px 24px;
         width: calc(100% - 48px);
-        text-align: center;
+        text-align: left;
     }
 
     .lang-switcher,
     .lang-toggle {
-        justify-content: center;
+        justify-content: flex-start;
         padding: 12px 24px;
         margin-left: 0;
     }
