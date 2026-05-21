@@ -1,0 +1,28 @@
+---
+const { lang = 'it' } = Astro.props;
+
+const t = {
+    it: {
+        privacy: 'Privacy Policy',
+        cookie: 'Cookie Policy',
+        impressum: 'Impressum'
+    },
+    de: {
+        privacy: 'Datenschutzerklärung',
+        cookie: 'Cookie-Richtlinie',
+        impressum: 'Impressum'
+    }
+};
+
+const labels = t[lang];
+---
+<footer>
+    <div class="container">
+        <p>&copy; {new Date().getFullYear()} IDAL BAU di Karasani Fatos. P.IVA: 03151460213.</p>
+        <div class="legal-links">
+            <a href={lang === 'it' ? "/privacy-policy.html" : "/privacy-policy-de.html"}>{labels.privacy}</a> |
+            <a href={lang === 'it' ? "/cookie-policy.html" : "/cookie-policy-de.html"}>{labels.cookie}</a> |
+            <a href={lang === 'it' ? "/impressum.html" : "/impressum-de.html"}>{labels.impressum}</a>
+        </div>
+    </div>
+</footer>

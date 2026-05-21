@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Abdichtungen Bozen | Balkonsanierungen Südtirol | IDAL BAU"
+  description="Professionelle Abdichtungen in Bozen und Meran. Balkonsanierung, Terrassenabdichtung und Leckortung in ganz Südtirol. Kostenlose Besichtigung."
+  keywords="impermeabilizzazioni Bolzano, risanamento balconi Alto Adige, ricerca perdite acqua Merano, Abdichtungen Bozen, Balkonsanierung Südtirol, IDAL BAU"
+  ogTitle="Abdichtungen Bozen | IDAL BAU"
+  ogDescription="Professionelle Abdichtungen in Bozen und Meran. Balkonsanierung, Terrassenabdichtung und Leckortung."
+  canonicalUrl="https://idalbau.github.io/abdichtungen-bozen.html"
+  lang="de"
+>
+  <!-- ================= PAGE HEADER ================= -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Abdichtungen in Bozen und Südtirol</h1>
+            <p>Professioneller Schutz gegen Wassereinbrüche und Feuchtigkeit.</p>
+        </div>
+    </div>
+
+    <!-- ================= CONTENT ================= -->
+    <section class="content-section container">
+        <h2 style="text-align: center; margin-bottom: 40px;">Unser Arbeitsprozess</h2>
+
+        <div class="step-box reveal">
+            <h3>1. Besichtigung und Diagnose</h3>
+            <p>Wir führen eine kostenlose Besichtigung durch, um die genaue Quelle des Lecks zu orten. Wir verwenden professionelle Techniken und Werkzeuge zur Leckortung, um unnötige und teure Abbrucharbeiten zu minimieren.</p>
+        </div>
+
+        <div class="step-box reveal">
+            <h3>2. Vorbereitung und Behandlung</h3>
+            <p>Wir bereiten die Oberflächen sorgfältig vor, indem wir beschädigte Beläge entfernen, Risse reparieren und spezielle Primer auftragen, um maximale Haftung der neuen Abdichtungsmembranen zu gewährleisten.</p>
+        </div>
+
+        <div class="step-box reveal">
+            <h3>3. Verlegung Abdichtungsbahnen und Wiederherstellung</h3>
+            <p>Wir verlegen moderne Bitumen- oder hochelastische Flüssigabdichtungen führender Marken (wie Mapei und Kerakoll), erstellen Gefälle und Abflüsse korrekt und schließen die Arbeit mit der Verlegung von witterungs- und frostbeständigen Außenböden ab.</p>
+        </div>
+
+        <!-- ================= CONTACT FORM ================= -->
+        <div class="contact-form reveal" id="contatti">
+            <h3 style="text-align: center; margin-bottom: 20px;">Kostenlose Besichtigung anfordern</h3>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="63cc33bc-343a-4ec1-b02f-4b836a57dfe5">
+                <input type="hidden" name="redirect" value="https://idalbau.github.io/vielen-dank.html">
+                <input type="hidden" name="subject" value="Richiesta Impermeabilizzazioni">
+                
+                <input type="text" name="Nome" placeholder="Name" required>
+                <input type="tel" name="Telefono" placeholder="Telefon" required>
+                <textarea name="Messaggio" rows="4" placeholder="Beschreiben Sie kurz das Problem (Terrasse, Balkon, Keller, Dach...)..." required></textarea>
+                
+                <!-- Checkbox GDPR Obbligatoria -->
+                <div class="gdpr-checkbox">
+                    <input type="checkbox" id="privacy" name="Privacy" required>
+                    <label for="privacy">Ich stimme der Verarbeitung meiner persönlichen Daten gemäß der <a href="privacy-policy-de.html" style="color:var(--idal-red); text-decoration:underline;" target="_blank">Datenschutzerklärung</a> zu.</label>
+                </div>
+
+                <button type="submit" class="btn" style="width:100%;"
+                    onclick="gtag('event', 'submit_form', {'event_category': 'Lead', 'event_label': 'Modulo_Contatti_Abdichtungen_DE'});">Anfrage Senden</button>
+            </form>
+        </div>
+    </section>
+</BaseLayout>

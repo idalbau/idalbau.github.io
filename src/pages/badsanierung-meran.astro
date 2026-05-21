@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Badsanierung Meran | Komplette Badsanierungen Südtirol | IDAL BAU"
+  description="Komplette Badsanierung in Meran und Umgebung. Abbruch, Sanitär- und Elektroanlagen, Estrich, Abdichtung und Fliesenlegen. Kostenloses Angebot."
+  keywords="ristrutturazione bagno Merano, rifare bagno Bolzano, Badsanierung Meran, piastrellista Merano, Fliesenleger Bozen, IDAL BAU"
+  ogTitle="Badsanierung Meran | IDAL BAU"
+  ogDescription="Komplette Badsanierung in Meran und Umgebung. Schnell, sauber und schlüsselfertig."
+  canonicalUrl="https://idalbau.github.io/badsanierung-meran.html"
+  lang="de"
+>
+  <!-- ================= PAGE HEADER ================= -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Komplette Badsanierung in Meran</h1>
+            <p>Schnell, sauber und schlüsselfertig. Vom Estrich bis zu den Fliesen.</p>
+        </div>
+    </div>
+
+    <!-- ================= CONTENT SECTION ================= -->
+    <section class="content-section container">
+        <h2 style="text-align: center; margin-bottom: 40px;">Unser Arbeitsprozess</h2>
+        
+        <div class="step-box">
+            <h3>1. Abbruch und Entsorgung</h3>
+            <p>Wir bauen das alte Badezimmer (Sanitärobjekte, Wand- und Bodenbeläge) komplett ab und kümmern uns um den gesetzeskonformen Abtransport und die Entsorgung des Bauschutts auf einer zugelassenen Deponie.</p>
+        </div>
+        <div class="step-box">
+            <h3>2. Anlagen und Estrich</h3>
+            <p>Wir erstellen die Schlitze für die neuen Sanitär- und Elektroinstallationen. Anschließend schließen wir die Schlitze, verlegen den neuen Estrich und tragen den verlegebereiten Putz auf.</p>
+        </div>
+        <div class="step-box">
+            <h3>3. Abdichtung und Fliesenlegen</h3>
+            <p>Wir dichten den Duschbereich und andere kritische wasserführende Bereiche mit Profiprodukten ab und verlegen fachgerecht die neuen Wand- und Bodenfliesen aus Keramik oder Feinsteinzeug.</p>
+        </div>
+
+        <div class="contact-form" id="contatti">
+            <h3 style="text-align: center; margin-bottom: 20px;">Fordern Sie ein Angebot für Ihr Badezimmer an</h3>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="63cc33bc-343a-4ec1-b02f-4b836a57dfe5">
+                <input type="hidden" name="redirect" value="https://idalbau.github.io/vielen-dank.html">
+                
+                <input type="text" name="Nome" placeholder="Name" required>
+                <input type="tel" name="Telefono" placeholder="Telefon" required>
+                <textarea name="Messaggio" rows="4" placeholder="Maße des Badezimmers oder gewünschte Arbeiten..." required></textarea>
+                
+                <!-- Checkbox GDPR Obbligatoria -->
+                <div class="gdpr-checkbox">
+                    <input type="checkbox" id="privacy" name="Privacy" required>
+                    <label for="privacy">Ich stimme der Verarbeitung meiner persönlichen Daten gemäß der <a href="privacy-policy-de.html" style="color:var(--idal-red); text-decoration:underline;" target="_blank">Datenschutzerklärung</a> zu.</label>
+                </div>
+
+                <button type="submit" class="btn" style="width:100%;"
+                    onclick="gtag('event', 'submit_form', {'event_category': 'Lead', 'event_label': 'Modulo_Contatti_Badsanierung_DE'});">Anfrage Senden</button>
+            </form>
+        </div>
+    </section>
+</BaseLayout>

@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Pagina non trovata | Seite nicht gefunden | IDAL BAU"
+  description=""
+  
+  
+  
+  
+  lang="it"
+>
+  <!-- ================= 404 CONTENT ================= -->
+    <section class="error-section" style="max-width: 900px; margin: 80px auto; padding: 0 20px; text-align: center;">
+        <div class="error-code" style="font-size: 6rem; font-weight: 900; color: var(--idal-red); margin-bottom: 20px; font-family: 'Montserrat', sans-serif;">404</div>
+
+        <div class="error-flex" style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; text-align: left; margin-top: 40px;">
+            <div style="flex: 1; min-width: 285px; background: rgba(255,255,255,0.9); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--idal-red);">
+                <h1 class="error-title" style="font-size: 1.6rem; margin-bottom: 15px; color: var(--idal-black); font-family: 'Montserrat', sans-serif;">Ops! Pagina non trovata.</h1>
+                <p class="error-desc" style="color: var(--idal-grey); line-height: 1.6; margin-bottom: 25px; font-size: 0.95rem;">La pagina che stai cercando potrebbe essere stata rimossa, aver cambiato nome, oppure il link è errato. Niente paura, le fondamenta del sito sono solide!</p>
+                <a href="index.html" class="btn" style="display: inline-block;"><i class="fas fa-home"></i> Torna alla Home</a>
+            </div>
+
+            <div style="flex: 1; min-width: 285px; background: rgba(255,255,255,0.9); padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--idal-red);">
+                <h1 class="error-title" style="font-size: 1.6rem; margin-bottom: 15px; color: var(--idal-black); font-family: 'Montserrat', sans-serif;">Seite nicht gefunden.</h1>
+                <p class="error-desc" style="color: var(--idal-grey); line-height: 1.6; margin-bottom: 25px; font-size: 0.95rem;">Die von Ihnen gesuchte Seite wurde entfernt, umbenannt oder existiert nicht mehr. Keine Sorge, das Fundament der Website ist stabil!</p>
+                <a href="index-de.html" class="btn" style="display: inline-block;"><i class="fas fa-home"></i> Zurück zur Startseite</a>
+            </div>
+        </div>
+    </section>
+</BaseLayout>

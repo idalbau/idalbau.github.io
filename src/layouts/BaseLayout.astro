@@ -1,0 +1,185 @@
+---
+const { 
+  lang = 'it', 
+  title, 
+  description, 
+  keywords, 
+  ogTitle, 
+  ogDescription, 
+  canonicalUrl, 
+  alternateUrlIt, 
+  alternateUrlDe 
+} = Astro.props;
+
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ================= SEO OTTIMIZZATA PER GOOGLE ================= -->
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    {keywords && <meta name="keywords" content={keywords}>}
+    <meta name="author" content="IDAL BAU di Karasani Fatos">
+    <meta name="google-site-verification" content="HLD8cy2vvzONBcl6k59KqzrnBDxmYVXYlsPNJVeZzLU" />
+    
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    {alternateUrlIt && <link rel="alternate" hreflang="it" href={alternateUrlIt} />}
+    {alternateUrlDe && <link rel="alternate" hreflang="de" href={alternateUrlDe} />}
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content={canonicalUrl || "https://idalbau.github.io/"}>
+    <meta property="og:title" content={ogTitle || title}>
+    <meta property="og:description" content={ogDescription || description}>
+    <meta property="og:image" content="https://idalbau.github.io/images/og-image.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content={canonicalUrl || "https://idalbau.github.io/"}>
+    <meta property="twitter:title" content={ogTitle || title}>
+    <meta property="twitter:description" content={ogDescription || description}>
+    <meta property="twitter:image" content="https://idalbau.github.io/images/og-image.webp">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ================= GOOGLE ANALYTICS ================= -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXXM8ZF82P"></script>
+    <script is:inline>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-FXXM8ZF82P');
+    </script>
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json" is:inline>
+    {
+        "@context": "https://schema.org",
+        "@type": "GeneralContractor",
+        "name": "IDAL BAU di Karasani Fatos",
+        "image": "https://idalbau.github.io/images/logo.png",
+        "url": "https://idalbau.github.io",
+        "telephone": "+393355652179",
+        "email": "info@idalbau.it",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Via Portici 254",
+            "addressLocality": "Merano",
+            "addressRegion": "BZ",
+            "postalCode": "39012",
+            "addressCountry": "IT"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 46.6693,
+            "longitude": 11.1598
+        },
+        "openingHours": "Mo-Fr 07:30-18:00",
+        "sameAs": [],
+        "priceRange": "$$"
+    }
+    </script>
+
+    <!-- ================= PERFORMANCE OPTIMIZATIONS ================= -->
+    <link rel="preload" as="image" href="/images/logo.png">
+    {lang === 'it' ? (
+        <>
+            <link rel="prefetch" href="/chi-siamo.html">
+            <link rel="prefetch" href="/portfolio.html">
+        </>
+    ) : (
+        <>
+            <link rel="prefetch" href="/ueber-uns.html">
+            <link rel="prefetch" href="/projektbeispiele.html">
+        </>
+    )}
+
+    <!-- ================= NOSCRIPT FALLBACK ================= -->
+    <noscript>
+        <style>
+            /* Reveal animations visible by default */
+            .reveal { opacity: 1 !important; transform: none !important; }
+            /* Hide Cookie Banner via Checkbox Hack */
+            .cookie-checkbox:checked ~ .cookie-banner { display: none !important; }
+            /* Mobile menu open via Checkbox Hack */
+            .nav-container:has(.mobile-menu-checkbox:checked) .nav-links { transform: translate3d(0, 0, 0) !important; }
+            body:has(.mobile-menu-checkbox:checked) { overflow: hidden !important; }
+            body:has(.mobile-menu-checkbox:checked)::after { opacity: 1 !important; visibility: visible !important; }
+            /* Slideshow pure CSS animation fallback */
+            .hero-slide { opacity: 0; animation: jsless-slideshow 20s infinite; }
+            .hero-slide:nth-child(1) { animation-delay: 0s; }
+            .hero-slide:nth-child(2) { animation-delay: 5s; }
+            .hero-slide:nth-child(3) { animation-delay: 10s; }
+            .hero-slide:nth-child(4) { animation-delay: 15s; }
+            @keyframes jsless-slideshow {
+                0%, 20% { opacity: 1; z-index: 2; }
+                25%, 95% { opacity: 0; z-index: 1; }
+                100% { opacity: 1; z-index: 2; }
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <!-- ================= 1. TOP BAR ================= -->
+    <div class="top-bar">
+        <div class="container top-bar-flex">
+            <div class="top-bar-left">
+                <a href="tel:+393355652179"
+                    onclick="gtag('event', 'click_telefono', {'event_category': 'Contatto', 'event_label': 'TopBar_Call'});">
+                    <i class="fas fa-phone-alt"></i> +39 335 565 2179
+                </a>
+                <a href="mailto:info@idalbau.it"><i class="fas fa-envelope"></i> info@idalbau.it</a>
+            </div>
+            <div class="top-bar-right">
+                <span><i class="far fa-clock"></i> {lang === 'it' ? 'Orario: Lun-Ven 07:30 - 18:00' : 'Öffnungszeiten: Mo-Fr 07:30 - 18:00'}</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= 2. HEADER ================= -->
+    <Header lang={lang} />
+
+    <!-- ================= 3. MAIN CONTENT ================= -->
+    <slot />
+
+    <!-- ================= 4. FOOTER ================= -->
+    <Footer lang={lang} />
+
+    <!-- ================= BANNER COOKIE ================= -->
+    <input type="checkbox" id="cookie-toggle" class="cookie-checkbox" style="display: none;">
+    <div id="cookieBanner" class="cookie-banner">
+        <p>
+            {lang === 'it' 
+                ? 'Utilizziamo i cookie per offrirti la migliore esperienza sul nostro sito e per analizzare il traffico. Leggi la nostra '
+                : 'Wir verwenden Cookies, um Ihnen das beste Erlebnis auf unserer Website zu bieten und den Datenverkehr zu analysieren. Lesen Sie unsere '}
+            <a href={lang === 'it' ? "/cookie-policy.html" : "/cookie-policy-de.html"}>Cookie Policy</a>.
+        </p>
+        <div class="cookie-buttons">
+            <label for="cookie-toggle" class="btn-accept" onclick="accettaCookie()">{lang === 'it' ? 'Accetta' : 'Akzeptieren'}</label>
+            <label for="cookie-toggle" class="btn-reject" onclick="rifiutaCookie()">{lang === 'it' ? 'Rifiuta' : 'Ablehnen'}</label>
+        </div>
+    </div>
+
+    <!-- ================= WHATSAPP FLOATING PULSANTE ================= -->
+    <a href="https://wa.me/393355652179" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        onclick="gtag('event', 'click_whatsapp', {'event_category': 'Lead', 'event_label': 'WhatsApp_Pulsante'});">
+        <i class="fab fa-whatsapp"></i> <span>{lang === 'it' ? 'Scrivici' : 'Schreiben Sie uns'}</span>
+    </a>
+
+    <!-- ================= SCRIPT ================= -->
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

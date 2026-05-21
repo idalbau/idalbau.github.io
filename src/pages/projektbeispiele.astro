@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Projektbeispiele | Sanierungsarbeiten IDAL BAU"
+  description="Projektbeispiele unserer Sanierungen in Meran und Bozen. Nutzen Sie die Vorher-Nachher-Bilder für Ideen und Inspirationen für Ihr Zuhause. IDAL BAU."
+  keywords="esempi ristrutturazioni Merano, lavori edili Alto Adige, prima e dopo bagno, Projektbeispiele Sanierung Südtirol, IDAL BAU"
+  ogTitle="Projektbeispiele | IDAL BAU"
+  ogDescription="Projektbeispiele unserer Sanierungen in Meran und Bozen. Vorher-Nachher-Bilder für Ideen und Inspirationen."
+  canonicalUrl="https://idalbau.github.io/projektbeispiele.html"
+  lang="de"
+>
+  <!-- ================= PAGE HEADER ================= -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Projektbeispiele</h1>
+            <p>Anschauliche Beispiele dafür, wie das ideale Ergebnis für Ihren spezifischen Fall aussehen könnte.</p>
+        </div>
+    </div>
+
+    <!-- ================= PORTFOLIO SECTION ================= -->
+    <section class="portfolio-section container">
+        <h2 class="section-title">Vorher-Nachher <span>Beispiele</span></h2>
+
+        <div class="slider-grid">
+            <!-- SLIDER 1: Ristrutturazione Bagno -->
+            <div class="slider-card reveal">
+                <h3>Komplette Badsanierung (Beispiel 1)</h3>
+                <div class="ba-slider">
+                    <img src="images/bagno-prima.webp" alt="Badezimmer vor der Sanierung" class="ba-before" loading="lazy">
+                    <img src="images/bagno-dopo.webp" alt="Badezimmer nach der Sanierung" class="ba-after" loading="lazy">
+                    <input type="range" min="0" max="100" value="50" oninput="moveSlider(this)" aria-label="Slider Vergleich">
+                    <div class="slider-handle"></div>
+                    <div class="ba-label ba-label-before">Vorher</div>
+                    <div class="ba-label ba-label-after">Nachher</div>
+                </div>
+            </div>
+
+            <!-- SLIDER 2: Rifacimento Completo Bagno - Esempio 2 -->
+            <div class="slider-card reveal">
+                <h3>Komplette Badsanierung (Beispiel 2)</h3>
+                <div class="ba-slider">
+                    <img src="images/bagno-prima-2.webp" alt="Badezimmer vor der Sanierung" class="ba-before" loading="lazy">
+                    <img src="images/bagno-dopo-2.webp" alt="Badezimmer nach der Sanierung" class="ba-after" loading="lazy">
+                    <input type="range" min="0" max="100" value="50" oninput="moveSlider(this)" aria-label="Slider Vergleich">
+                    <div class="slider-handle"></div>
+                    <div class="ba-label ba-label-before">Vorher</div>
+                    <div class="ba-label ba-label-after">Nachher</div>
+                </div>
+            </div>
+
+            <!-- SLIDER 3: Impermeabilizzazione Terrazza -->
+            <div class="slider-card reveal">
+                <h3>Terrassenabdichtung (Beispiel 1)</h3>
+                <div class="ba-slider">
+                    <img src="images/terrazza-prima.webp" alt="Terrasse vor der Sanierung" class="ba-before" loading="lazy">
+                    <img src="images/terrazza-dopo.webp" alt="Terrasse nach der Sanierung" class="ba-after" loading="lazy">
+                    <input type="range" min="0" max="100" value="50" oninput="moveSlider(this)" aria-label="Slider Vergleich">
+                    <div class="slider-handle"></div>
+                    <div class="ba-label ba-label-before">Vorher</div>
+                    <div class="ba-label ba-label-after">Nachher</div>
+                </div>
+            </div>
+
+            <!-- SLIDER 4: Impermeabilizzazione Terrazza - Esempio 2 -->
+            <div class="slider-card reveal">
+                <h3>Terrassenabdichtung (Beispiel 2)</h3>
+                <div class="ba-slider">
+                    <img src="images/terrazza-prima-2.webp" alt="Terrasse vor der Sanierung" class="ba-before" loading="lazy">
+                    <img src="images/terrazza-dopo-2.webp" alt="Terrasse nach der Sanierung" class="ba-after" loading="lazy">
+                    <input type="range" min="0" max="100" value="50" oninput="moveSlider(this)" aria-label="Slider Vergleich">
+                    <div class="slider-handle"></div>
+                    <div class="ba-label ba-label-before">Vorher</div>
+                    <div class="ba-label ba-label-after">Nachher</div>
+                </div>
+            </div>
+
+            <!-- SLIDER 5: Pavimentazioni -->
+            <div class="slider-card reveal">
+                <h3>Bodenbeläge & Fliesenarbeiten</h3>
+                <div class="ba-slider">
+                    <img src="images/pavimento-prima.webp" alt="Boden vor der Verlegung" class="ba-before" loading="lazy">
+                    <img src="images/pavimento-dopo.webp" alt="Boden nach der Verlegung" class="ba-after" loading="lazy">
+                    <input type="range" min="0" max="100" value="50" oninput="moveSlider(this)" aria-label="Slider Vergleich">
+                    <div class="slider-handle"></div>
+                    <div class="ba-label ba-label-before">Vorher</div>
+                    <div class="ba-label ba-label-after">Nachher</div>
+                </div>
+            </div>
+
+            <!-- SLIDER 6: Cartongesso & Tinteggiature -->
+            <div class="slider-card reveal">
+                <h3>Trockenbau & Malereiarbeiten</h3>
+                <div class="ba-slider">
+                    <img src="images/cartongesso-prima.webp" alt="Zimmer vor den Arbeiten" class="ba-before" loading="lazy">
+                    <img src="images/cartongesso-dopo.webp" alt="Zimmer nach den Arbeiten" class="ba-after" loading="lazy">
+                    <input type="range" min="0" max="100" value="50" oninput="moveSlider(this)" aria-label="Slider Vergleich">
+                    <div class="slider-handle"></div>
+                    <div class="ba-label ba-label-before">Vorher</div>
+                    <div class="ba-label ba-label-after">Nachher</div>
+                </div>
+            </div>
+
+            <!-- SLIDER 7: Appartamento 1 -->
+            <div class="slider-card reveal">
+                <h3>Wohnungssanierung (Beispiel 1)</h3>
+                <div class="ba-slider">
+                    <img src="images/appartamento-prima-1.webp" alt="Wohnung vor der Sanierung" class="ba-before" loading="lazy">
+                    <img src="images/appartamento-dopo-1.webp" alt="Wohnung nach der Sanierung" class="ba-after" loading="lazy">
+                    <input type="range" min="0" max="100" value="50" oninput="moveSlider(this)" aria-label="Slider Vergleich">
+                    <div class="slider-handle"></div>
+                    <div class="ba-label ba-label-before">Vorher</div>
+                    <div class="ba-label ba-label-after">Nachher</div>
+                </div>
+            </div>
+
+            <!-- SLIDER 8: Appartamento 2 -->
+            <div class="slider-card reveal">
+                <h3>Wohnungssanierung (Beispiel 2)</h3>
+                <div class="ba-slider">
+                    <img src="images/appartamento-prima-2.webp" alt="Küche vor der Sanierung" class="ba-before" loading="lazy">
+                    <img src="images/appartamento-dopo-2.webp" alt="Küche nach der Sanierung" class="ba-after" loading="lazy">
+                    <input type="range" min="0" max="100" value="50" oninput="moveSlider(this)" aria-label="Slider Vergleich">
+                    <div class="slider-handle"></div>
+                    <div class="ba-label ba-label-before">Vorher</div>
+                    <div class="ba-label ba-label-after">Nachher</div>
+                </div>
+            </div>
+
+            <!-- SLIDER 9: Appartamento 3 -->
+            <div class="slider-card reveal">
+                <h3>Wohnungssanierung (Beispiel 3)</h3>
+                <div class="ba-slider">
+                    <img src="images/appartamento-prima-3.webp" alt="Schlafzimmer vor der Sanierung" class="ba-before" loading="lazy">
+                    <img src="images/appartamento-dopo-3.webp" alt="Schlafzimmer nach der Sanierung" class="ba-after" loading="lazy">
+                    <input type="range" min="0" max="100" value="50" oninput="moveSlider(this)" aria-label="Slider Vergleich">
+                    <div class="slider-handle"></div>
+                    <div class="ba-label ba-label-before">Vorher</div>
+                    <div class="ba-label ba-label-after">Nachher</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GALLERIA CLASSICA -->
+        <h2 class="section-title reveal" style="margin-top: 100px;">Ideen und <span>Inspirationen</span></h2>
+        
+        <div class="gallery-grid reveal">
+            <img src="images/01.webp" class="gallery-item" alt="Bauarbeiten IDAL BAU" loading="lazy">
+            <img src="images/02.webp" class="gallery-item" alt="Bauarbeiten IDAL BAU" loading="lazy">
+            <img src="images/03.webp" class="gallery-item" alt="Bauarbeiten IDAL BAU" loading="lazy">
+            <img src="images/04.webp" class="gallery-item" alt="Bauarbeiten IDAL BAU" loading="lazy">
+        </div>
+    </section>
+</BaseLayout>

@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Vielen Dank | IDAL BAU"
+  description="Vielen Dank für Ihre Kontaktaufnahme. IDAL BAU von Karasani Fatos."
+  
+  
+  
+  canonicalUrl="https://idalbau.github.io/vielen-dank.html"
+  lang="de"
+>
+  <!-- Header semplice -->
+    <header style="padding: 15px 0; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+        <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="logo">
+                <a href="index-de.html"><img src="images/logo.png" alt="IDAL BAU Logo" style="height: 50px;"></a>
+            </div>
+            <div class="lang-switcher">
+                <a href="grazie.html" class="lang-btn">IT</a>
+                <a href="vielen-dank.html" class="lang-btn active">DE</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Success Container -->
+    <div class="success-wrapper">
+        <div class="success-card">
+            <!-- Animated SVG Checkmark -->
+            <svg class="success-checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="success-checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                <path class="success-checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+            
+            <!-- German Content -->
+            <div>
+                <h1>Erfolgreich gesendet!</h1>
+                <p>Vielen Dank für Ihre Kontaktaufnahme. Wir haben Ihre Anfrage erhalten und werden uns so schnell wie möglich mit einem kostenlosen Angebot bei Ihnen melden.</p>
+                <p class="redirect-notice">
+                    <i class="fas fa-spinner"></i>
+                    Sie werden in <strong class="countdown-num">7</strong> Sekunden zur Startseite weitergeleitet...
+                </p>
+                <a href="index-de.html" class="btn-home">
+                    <i class="fas fa-home"></i> Sofort zur Startseite
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer semplice -->
+    <footer style="text-align: center; padding: 20px 0; border-top: 1px solid #eee; background: #fff; font-size: 0.9rem; color: var(--idal-grey);">
+        <p>&copy; 2026 IDAL BAU di Karasani Fatos.</p>
+    </footer>
+
+    <!-- Scripts -->
+    
+    <script>
+        // Redirect timer logic
+        (function() {
+            let count = 7;
+            const countInterval = setInterval(() => {
+                count--;
+                if (count <= 0) {
+                    clearInterval(countInterval);
+                    window.location.href = "index-de.html";
+                    return;
+                }
+                document.querySelectorAll('.countdown-num').forEach(el => {
+                    el.textContent = count;
+                });
+            }, 1000);
+        })();
+    </script>
+</BaseLayout>

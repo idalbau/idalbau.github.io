@@ -1,0 +1,79 @@
+---
+const { lang = 'it' } = Astro.props;
+
+const t = {
+    it: {
+        home: 'Home',
+        services: 'Servizi',
+        allServices: 'Tutti i Servizi',
+        bathrooms: 'Ristrutturazioni Bagni Merano',
+        waterproofing: 'Impermeabilizzazioni Bolzano',
+        masonry: 'Opere Murarie & Demolizioni',
+        flooring: 'Posa Pavimentazioni & Piastrelle',
+        drywall: 'Opere in Cartongesso & Tinteggiatura',
+        maintenance: 'Manutenzioni Condominiali',
+        about: 'Chi Siamo',
+        portfolio: 'Esempi',
+        quote: 'Preventivo Gratuito'
+    },
+    de: {
+        home: 'Startseite',
+        services: 'Dienstleistungen',
+        allServices: 'Alle Dienstleistungen',
+        bathrooms: 'Badsanierung Meran',
+        waterproofing: 'Abdichtungen Bozen',
+        masonry: 'Maurer- & Abbrucharbeiten',
+        flooring: 'Boden- & Fliesenverlegung',
+        drywall: 'Trockenbau & Malerarbeiten',
+        maintenance: 'Wartung von Wohnanlagen',
+        about: 'Über uns',
+        portfolio: 'Projekte',
+        quote: 'Kostenloses Angebot'
+    }
+};
+
+const labels = t[lang];
+---
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            <a href={lang === 'it' ? "/index.html" : "/index-de.html"}>
+                <img src="/images/logo.png" alt="IDAL BAU Logo">
+            </a>
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+            <a href={lang === 'it' ? "/index.html" : "/index-de.html"} class="active">{labels.home}</a>
+
+            <!-- Struttura Dropdown Servizi -->
+            <div class="dropdown">
+                <a>{labels.services} <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href={lang === 'it' ? "/index.html#servizi" : "/index-de.html#servizi"} class="dropdown-item primary">{labels.allServices}</a>
+                    <a href={lang === 'it' ? "/ristrutturazione-bagno-merano.html" : "/badsanierung-meran.html"} class="dropdown-item secondary">{labels.bathrooms}</a>
+                    <a href={lang === 'it' ? "/impermeabilizzazioni-bolzano.html" : "/abdichtungen-bozen.html"} class="dropdown-item secondary">{labels.waterproofing}</a>
+                    <a href={lang === 'it' ? "/index.html#opere-murarie" : "/index-de.html#opere-murarie"} class="dropdown-item secondary">{labels.masonry}</a>
+                    <a href={lang === 'it' ? "/index.html#pavimentazioni" : "/index-de.html#pavimentazioni"} class="dropdown-item secondary">{labels.flooring}</a>
+                    <a href={lang === 'it' ? "/index.html#cartongesso" : "/index-de.html#cartongesso"} class="dropdown-item secondary">{labels.drywall}</a>
+                    <a href={lang === 'it' ? "/index.html#manutenzioni-condominiali" : "/index-de.html#manutenzioni-condominiali"} class="dropdown-item secondary">{labels.maintenance}</a>
+                </div>
+            </div>
+
+            <a href={lang === 'it' ? "/chi-siamo.html" : "/ueber-uns.html"}>{labels.about}</a>
+            <a href={lang === 'it' ? "/portfolio.html" : "/projektbeispiele.html"}>{labels.portfolio}</a>
+            <a href={lang === 'it' ? "/index.html#contatti" : "/index-de.html#contatti"} class="btn">{labels.quote}</a>
+
+            <!-- Toggle Bilingue Statico -->
+            <div class="lang-switcher">
+                <a href="/index.html" class={`lang-btn ${lang === 'it' ? 'active' : ''}`}>IT</a>
+                <a href="/index-de.html" class={`lang-btn ${lang === 'de' ? 'active' : ''}`}>DE</a>
+            </div>
+        </nav>
+
+        <!-- Mobile Toggle -->
+        <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox" aria-label="Toggle Mobile Menu" style="display: none;">
+        <label for="mobile-menu-toggle" class="mobile-toggle">
+            <i class="fas fa-bars"></i>
+        </label>
+    </div>
+</header>

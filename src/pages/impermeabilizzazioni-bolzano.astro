@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Impermeabilizzazioni Bolzano | Risanamento Balconi Alto Adige | IDAL BAU"
+  description="Impermeabilizzazioni professionali a Bolzano e Merano. Risanamento balconi, terrazze e coperture. Ricerca perdite d'acqua in tutto l'Alto Adige."
+  keywords="impermeabilizzazioni Bolzano, risanamento balconi Alto Adige, ricerca perdite acqua Merano, Abdichtungen Bozen, Balkonsanierung Südtirol, IDAL BAU"
+  ogTitle="Impermeabilizzazioni Bolzano | IDAL BAU"
+  ogDescription="Impermeabilizzazioni professionali a Bolzano e Merano. Risanamento balconi, terrazze e coperture."
+  canonicalUrl="https://idalbau.github.io/impermeabilizzazioni-bolzano.html"
+  lang="it"
+>
+  <!-- ================= PAGE HEADER ================= -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Impermeabilizzazioni a Bolzano e Alto Adige</h1>
+            <p>Protezione professionale contro le infiltrazioni d'acqua.</p>
+        </div>
+    </div>
+
+    <!-- ================= CONTENT ================= -->
+    <section class="content-section container">
+        <h2 style="text-align: center; margin-bottom: 40px;">Il Nostro Processo di Lavoro</h2>
+
+        <div class="step-box reveal">
+            <h3>1. Sopralluogo e Diagnosi</h3>
+            <p>Effettuiamo un sopralluogo gratuito per individuare la fonte esatta dell'infiltrazione. Utilizziamo tecniche e strumenti professionali per la ricerca di perdite d'acqua, riducendo al minimo le demolizioni invasive.</p>
+        </div>
+
+        <div class="step-box reveal">
+            <h3>2. Preparazione e Trattamento</h3>
+            <p>Prepariamo con cura le superfici rimuovendo le pavimentazioni o i massetti deteriorati. Ripariamo crepe e fessure strutturali, e applichiamo primer specifici per garantire la massima aderenza delle nuove membrane.</p>
+        </div>
+
+        <div class="step-box reveal">
+            <h3>3. Posa Guaine e Ripristino</h3>
+            <p>Applichiamo sistemi impermeabilizzanti all'avanguardia (guaine bituminose o membrane liquide ad alta elasticità di marchi leader come Mapei e Kerakoll), realizzando corrette pendenze e scarichi. Completiamo il lavoro con la posa della nuova pavimentazione esterna resistente al gelo.</p>
+        </div>
+
+        <!-- ================= CONTACT FORM ================= -->
+        <div class="contact-form reveal" id="contatti">
+            <h3 style="text-align: center; margin-bottom: 20px;">Richiedi un Sopralluogo Gratuito</h3>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="63cc33bc-343a-4ec1-b02f-4b836a57dfe5">
+                <input type="hidden" name="redirect" value="https://idalbau.github.io/grazie.html">
+                <input type="hidden" name="subject" value="Richiesta Impermeabilizzazioni">
+                
+                <input type="text" name="Nome" placeholder="Nome" required>
+                <input type="tel" name="Telefono" placeholder="Telefono" required>
+                <textarea name="Messaggio" rows="4" placeholder="Descrivi brevemente il problema (terrazza, balcone, cantina, tetto...)..." required></textarea>
+                
+                <!-- Checkbox GDPR Obbligatoria -->
+                <div class="gdpr-checkbox">
+                    <input type="checkbox" id="privacy" name="Privacy" required>
+                    <label for="privacy">Accetto il trattamento dei dati personali secondo la <a href="privacy-policy.html" style="color:var(--idal-red); text-decoration:underline;" target="_blank">Privacy Policy</a>.</label>
+                </div>
+
+                <button type="submit" class="btn" style="width:100%;"
+                    onclick="gtag('event', 'submit_form', {'event_category': 'Lead', 'event_label': 'Modulo_Contatti_Impermeabilizzazioni'});">Invia Richiesta</button>
+            </form>
+        </div>
+    </section>
+</BaseLayout>
