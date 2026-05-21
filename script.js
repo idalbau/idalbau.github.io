@@ -59,8 +59,15 @@ function initMobileMenu() {
         // Toggle mobile drawer
         mobileToggle.addEventListener('click', function (e) {
             e.stopPropagation();
+            e.preventDefault(); // Prevent synthetic click on checkbox to avoid double-firing & immediate closing
             const isActive = navLinks.classList.toggle('active');
             document.body.classList.toggle('menu-open', isActive);
+            
+            // Sync checkbox state programmatically if it exists
+            const checkbox = document.getElementById('mobile-menu-toggle');
+            if (checkbox) {
+                checkbox.checked = isActive;
+            }
         });
 
         // Close drawer when clicking outside
@@ -68,6 +75,12 @@ function initMobileMenu() {
             if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !e.target.closest('.mobile-toggle')) {
                 navLinks.classList.remove('active');
                 document.body.classList.remove('menu-open');
+                
+                // Sync checkbox state programmatically if it exists
+                const checkbox = document.getElementById('mobile-menu-toggle');
+                if (checkbox) {
+                    checkbox.checked = false;
+                }
             }
         });
 
@@ -78,6 +91,12 @@ function initMobileMenu() {
                 if (window.innerWidth <= 900) {
                     navLinks.classList.remove('active');
                     document.body.classList.remove('menu-open');
+                    
+                    // Sync checkbox state programmatically if it exists
+                    const checkbox = document.getElementById('mobile-menu-toggle');
+                    if (checkbox) {
+                        checkbox.checked = false;
+                    }
                 }
             });
         });
